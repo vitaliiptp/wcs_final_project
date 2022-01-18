@@ -1,10 +1,17 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Jost': ['Jost', ...defaultTheme.fontFamily.sans],
+      },
+    },
     colors: {
       'purple': '#AD1FEA',
       'blue': '#4661E6',
