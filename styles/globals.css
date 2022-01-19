@@ -24,3 +24,45 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*Button Component*/
+
+:root{
+  --purple : #AD1FEA;
+  --blue: #4661E6;
+  --delete : red;
+  --cancel: darkblue;
+}
+
+.btn {
+  border-radius: 10px;
+  color:white;
+
+}
+.btn:hover{
+  opacity: 60%;
+}
+
+/*buttonStyle*/
+.btn--violett{
+  background-color: var(--purple);
+}
+.btn--blue{
+  background-color: var(--blue);
+}
+.btn--delete{
+  background-color: var(--delete);
+}
+.btn--cancel{
+  background-color: var(--cancel);
+}
+/*buttonSize*/
+.btn--large{
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+.btn--medium{
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  font-size: 12px;
+}
