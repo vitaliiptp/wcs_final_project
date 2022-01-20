@@ -1,8 +1,7 @@
 import React from "react";
-import Button from "../components/global/button";
-import UpvoteBtn from "../components/global/upvoteBtn";
-import SortBtn from "../components/global/sortBtn";
-import FeedbackCard from "../components/feedbackCard";
+import Button from "../components/global/Button";
+import SortBtn from "../components/global/SortBtn";
+import Feedbacks from "../components/Feedbacks";
 
 const Home = () => {
   return (
@@ -26,10 +25,9 @@ const Home = () => {
       <Button type="button" buttonStyle="btn--purple" buttonSize="btn--large">
         Save Changes
       </Button>
-      <GoBackButton route = "/"/>
 
       <SortBtn />
-      <FeedbackCard />
+        <Feedbacks />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
-import Comments from "./svg/comments";
+import Comments from "./svg/Comments";
 
 const CommentBtn = ({comments}) => {
     return (
-        <div className="flex flex-row items-center font-bold text-[1rem] text-blue-deep">
+        <div className="flex flex-row items-center text-b-16">
             <Comments />
-            <div className="pl-[0.5rem]">{comments || "2"}</div>
+            <div className="pl-[0.5rem]">{comments || "0"}</div>
         </div>
     );
 };

@@ -1,8 +1,9 @@
 import react from "react";
+import SuggestionCat from "./Buttons/SuggestionCat";
 
-function suggestions ({menuItem}){
+function Suggestion ({menuItem}){
     return (
-        <div classname= "">
+        <div className= "">
         {
         menuItem.map((item) =>{
             return <div className="itemCard" key={item.id}>
@@ -18,4 +19,4 @@ function suggestions ({menuItem}){
         </div>
     )
 }
-export default suggestions;
+export default Suggestion;

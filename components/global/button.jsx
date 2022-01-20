@@ -2,7 +2,7 @@ import react from "react";
 
 
 const Styles = [
-    "btn--violett",
+    "btn--violet",
     "btn--blue",
     "btn--delete",
     "btn--cancel"
