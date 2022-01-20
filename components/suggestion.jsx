@@ -1,7 +1,7 @@
 import react from "react";
 import SuggestionCat from "./Buttons/SuggestionCat";
 
-function suggestions ({menuItem}){
+function Suggestion ({menuItem}){
     return (
         <div className= "">
         {
@@ -19,4 +19,4 @@ function suggestions ({menuItem}){
         </div>
     )
 }
-export default suggestions;
+export default Suggestion;
