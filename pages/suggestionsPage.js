@@ -8,7 +8,7 @@ const allCategories = ["All","UX","UI", ...new Set(items.productRequests.map(ite
 
 console.log(allCategories);
 
-function SuggestionsPage() {
+function suggestionsPage() {
     const [menuItem,setMenuItem] = useState(items.productRequests);
     const [suggestionButtonCat, setSuggestionButtonCat] = useState(allCategories);
     console.log(suggestionButtonCat);
@@ -30,4 +30,4 @@ function SuggestionsPage() {
     )
 }
 
-export default SuggestionsPage;
+export default suggestionsPage;

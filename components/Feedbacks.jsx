@@ -1,12 +1,12 @@
 import React from "react";
 import FeedbackCard from "./global/FeedbackCard";
-import data from "../data.json";
+//import data from "../data.json";
 
-const Feedbacks = () => {
+const Feedbacks = ({menuItem}) => {
 
   return (
     <div>
-      {data.productRequests.map((item, index) => (
+      {menuItem.map((item, index) => (
           // console.log(item.comments.length)
         <FeedbackCard
           key={`feedback${index}`}
