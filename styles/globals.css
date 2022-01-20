@@ -1,18 +1,53 @@
-/*Jost - Google font family*/
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind Custom Styles */
 
+@layer components {
+
+  /* General text (b = bold, n = normal) : */
+
+  .text-b-13 {
+    @apply font-bold text-[13px] text-blue-deep;
+  }
+  .text-b-14 {
+    @apply font-bold text-[14px] text-blue-deep;
+  }
+  .text-b-16 {
+    @apply font-bold text-[16px] text-blue-deep;
+  }
+  .text-b-18 {
+    @apply font-bold text-[18px] text-blue-deep;
+  }
+  .text-b-20 {
+    @apply font-bold text-[20px] text-blue-deep;
+  }
+  .text-b-24 {
+    @apply font-bold text-[24px] text-blue-deep;
+  }
+  .text-n-13 {
+    @apply font-normal text-[13px] text-grey-light;
+  }
+  .text-n-14 {
+    @apply font-normal text-[14px] text-white-dark;
+  }
+  .text-n-15 {
+    @apply font-normal text-[15px] text-grey-light;
+  }
+  .text-n-16 {
+    @apply font-normal text-[16px] text-grey-light;
+  }
+  .text-sb-13 {
+    @apply font-semibold text-[13px] text-blue-normal;
+  }
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -44,7 +79,7 @@ a {
 }
 
 /*buttonStyle*/
-.btn--violett{
+.btn--violet{
   background-color: var(--purple);
 }
 .btn--blue{

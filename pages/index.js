@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Button from "../components/global/button";
 import GoBackButton from "../components/Buttons/goBackButton"
-
 
 
 export default function Home() {
