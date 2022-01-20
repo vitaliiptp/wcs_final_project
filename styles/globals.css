@@ -14,14 +14,23 @@
   .text-b-14 {
     @apply font-bold text-[14px] text-blue-deep;
   }
+  .text-b-14_w {
+    @apply font-bold text-[14px] text-white-dark;
+  }
   .text-b-16 {
     @apply font-bold text-[16px] text-blue-deep;
   }
   .text-b-18 {
     @apply font-bold text-[18px] text-blue-deep;
   }
+  .text-b-18_w {
+    @apply font-bold text-[18px] text-white-normal;
+  }
   .text-b-20 {
     @apply font-bold text-[20px] text-blue-deep;
+  }
+  .text-b-20_w {
+    @apply font-bold text-[20px] text-white-normal;
   }
   .text-b-24 {
     @apply font-bold text-[24px] text-blue-deep;
@@ -34,6 +43,9 @@
   }
   .text-n-15 {
     @apply font-normal text-[15px] text-grey-light;
+  }
+  .text-n-15_w {
+    @apply font-normal text-[15px] text-white-normal;
   }
   .text-n-16 {
     @apply font-normal text-[16px] text-grey-light;
@@ -79,7 +91,7 @@ a {
 }
 
 /*buttonStyle*/
-.btn--violet{
+.btn--violet  {
   background-color: var(--purple);
 }
 .btn--blue{
