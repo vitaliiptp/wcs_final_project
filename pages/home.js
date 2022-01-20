@@ -26,11 +26,13 @@ const Home = () => {
       <Button type="button" buttonStyle="btn--purple" buttonSize="btn--large">
         Save Changes
       </Button>
+      <GoBackButton route = "/"/>
 
       <SortBtn />
       <FeedbackCard />
     </div>
   );
 };
+
 
 export default Home;
