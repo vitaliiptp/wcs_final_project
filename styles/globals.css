@@ -65,7 +65,7 @@ a {
 :root{
   --purple : #AD1FEA;
   --blue: #4661E6;
-  --delete : red;
+  --delete : #D73737;
   --cancel: darkblue;
 }
 
@@ -74,7 +74,7 @@ a {
   color:white;
 
 }
-.btn:hover{
+/*.btn:hover{
   opacity: 60%;
 }
 
@@ -87,6 +87,11 @@ a {
 }
 .btn--delete{
   background-color: var(--delete);
+}
+
+.btn--delete:hover{
+  background-color: #E98888 ;
+
 }
 .btn--cancel{
   background-color: var(--cancel);

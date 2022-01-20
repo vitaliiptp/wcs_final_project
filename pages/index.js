@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Button from "../components/global/Button";
+import Button from "../components/global/button";
+import GoBackButton from "../components/Buttons/goBackButton"
+
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
+<GoBackButton route="/home"></GoBackButton>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
@@ -32,7 +34,6 @@ export default function Home() {
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
-          <Button>"Test"</Button>
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
             className={styles.card}
