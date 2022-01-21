@@ -13,6 +13,7 @@ module.exports = {
       },
     },
     colors: {
+      'body-background': '#F2F2F2',
       'blue-normal': '#4661E6',
       'blue-normal-hover': '#7C91F9',
       'blue-light': '#62BCFA',
@@ -32,6 +33,7 @@ module.exports = {
       'white-light': '#F7F8FD',
       'white-dark': '#F2F4FF',
       'white-dark-hover': '#CFD7FF',
+    }
       'body-background': '#F2F2F2'
     },
   },
