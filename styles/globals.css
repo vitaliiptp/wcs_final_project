@@ -6,7 +6,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind Custom Styles */
 
+@layer components {
+
+  /* General text (b = bold, n = normal) : */
+
+  .text-b-14 {
+    @apply font-bold text-[14px] text-blue-deep;
+  }
+  .text-b-14-w {
+    @apply font-bold text-[14px] text-white-dark;
+  }
+  .text-b-14-g {
+    @apply font-bold text-[14px] text-grey-light;
+  }
+  .text-b-18 {
+    @apply font-bold text-[18px] text-blue-deep;
+  }
+  .text-b-20 {
+    @apply font-bold text-[20px] text-blue-deep;
+  }
+  .text-b-24 {
+    @apply font-bold text-[24px] text-blue-deep;
+  }
+  .text-n-13 {
+    @apply font-semibold text-[13px] text-grey-light;
+  }  
+  .text-n-14 {
+    @apply font-normal text-[14px] text-grey-light;
+  }
+  .text-n-15 {
+    @apply font-normal text-[15px] text-grey-light;
+  }
+  .text-n-16 {
+    @apply font-normal text-[16px] text-grey-light;
+  }
+}
+
+/* Normal CSS */
 
 html,
 body {
