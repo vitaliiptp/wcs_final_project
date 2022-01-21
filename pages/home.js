@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../components/global/Button";
+import Button from "../components/Buttons/button";
 import SortBtn from "../components/global/SortBtn";
-import Feedbacks from "../components/Feedbacks";
+import Feedbacks from "../components/feedbacks";
 
 const Home = () => {
   return (
