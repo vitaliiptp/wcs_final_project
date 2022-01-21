@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import AppContext from "../context/AppContext";
 
-const FeedbackCategories = ({ categories, filterCategory }) => {
+const FeedbackCategories = () => {
+  const { feedbackButtonCat, filterCategory } = useContext(AppContext);
+
   return (
     <div className="w-[16rem] h-[10.375rem] bg-white-normal mr-[1.875rem] p-[1.5rem] rounded-[0.625rem]">
-      {categories.map((category, index) => {
+      {feedbackButtonCat.map((category, index) => {
         return (
           <button
             key={index}
