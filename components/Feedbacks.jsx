@@ -37,7 +37,7 @@ const Feedbacks = () => {
         />
       </div>
       <div className="flex flex-col">
-        <Header />
+        <Header suggestionsCount={items.length}/>
         <div>
           {items.map((item, index) => {
             return (
