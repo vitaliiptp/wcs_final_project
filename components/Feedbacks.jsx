@@ -4,12 +4,12 @@ import AppContext from "../context/AppContext";
 
 
 const Feedbacks = () => {
-  const { items, setItems } = useContext(AppContext);
+  const { filteredItems } = useContext(AppContext);
 
 
   return (
     <div>
-      {items.map((item, index) => {
+      {filteredItems.map((item, index) => {
         return (
           <FeedbackCard
             key={`feedback${index}`}

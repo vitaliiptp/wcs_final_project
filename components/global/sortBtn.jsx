@@ -1,21 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
+import AppContext from "../../context/AppContext";
 
+const SortBtn = () => {
+  const { setSortCriteria } = useContext(AppContext);
 
-const SortBtn = ({items}) => {
-  const [sortedData, setSortedData] = useState(false);
-
-  const sortArray = (category) => {
-      const categories = {
-          MostUpvotes: "Most Upvotes",
-          LeastUpvotes: "Least Upvotes",
-          MostComments: "Most Comments",
-          LeastComments: "Least Comments",
-      };
-      const sortProperty = categories[category];
-      const sorted = [...items].sort((a, b) => b[sortProperty] - a[sortProperty]);
-      console.log(sorted);
-      setSortedData(sorted);
-  };
 
   return (
     <label className="ml-[2rem] bg-blue-dark text-n-14" htmlFor="sortOptions">
@@ -24,12 +12,12 @@ const SortBtn = ({items}) => {
         className="pl-[0.5rem] bg-blue-dark text-b-14_w cursor-pointer"
         name="sortOptions"
         id="sortOptions"
-        // onChange={(e) => sortArray(e.target.value)}
+        onChange={(e) => setSortCriteria(e.target.value)}
       >
-        <option value="MostUpvotes">Most Upvotes</option>
-        <option value="LeastUpvotes">Least Upvotes</option>
-        <option value="MostComments">Most Comments</option>
-        <option value="LeastComments">Least Comments</option>
+        <option value="Most Upvotes">Most Upvotes</option>
+        <option value="Least Upvotes">Least Upvotes</option>
+        <option value="Most Comments">Most Comments</option>
+        <option value="Least Comments">Least Comments</option>
       </select>
     </label>
   );

@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import Link from 'next/link'
 import SortBtn from "../global/sortBtn";
 import HeaderIcon from "./svg/headerIcon";
 import Button from "../Buttons/button";
@@ -19,7 +20,9 @@ const Header = () => {
       </div>
       <div className="mr-[1rem] ml-[14.5rem]">
         <Button type="button" buttonStyle="btn--purple" buttonSize="btn--large">
-          + Add Feedback
+          <Link href="/newfeedback">
+            <a>+ Add Feedback</a>
+          </Link>
         </Button>
       </div>
     </div>

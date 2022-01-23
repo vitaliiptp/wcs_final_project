@@ -33,8 +33,6 @@ module.exports = {
       'white-light': '#F7F8FD',
       'white-dark': '#F2F4FF',
       'white-dark-hover': '#CFD7FF',
-    }
-      'body-background': '#F2F2F2'
     },
   },
   plugins: [],
