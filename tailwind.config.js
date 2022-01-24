@@ -26,6 +26,7 @@ module.exports = {
       'purple-normal': '#AD1FEA',
       'purple-normal-hover': '#C75AF6',
       'purple-gradient': '#A337F6',
+      'purple-light': '#8C92B3',
       'red-normal': '#D73737',
       'red-normal-hover': '#E98888',
       'salmon-normal': '#F49F85',

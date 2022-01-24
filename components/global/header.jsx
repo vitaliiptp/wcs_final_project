@@ -20,8 +20,8 @@ const Header = () => {
       </div>
       <div className="mr-[1rem] ml-[14.5rem]">
         <Button type="button" buttonStyle="btn--purple" buttonSize="btn--large">
-          <Link href="/newfeedback">
-            <a>+ Add Feedback</a>
+          <Link href="/add-feedback">
+            <a className="text-b-14_w">+ Add Feedback</a>
           </Link>
         </Button>
       </div>

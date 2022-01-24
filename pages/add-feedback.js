@@ -1,15 +1,12 @@
 import React from "react";
-import ArrowLeft from "../components/global/svg/arrowLeft";
 import NewFeedback from "../components/global/svg/newFeedback";
+import GoBackBtn from "../components/global/goBackBtn";
 
-const newFeedback = () => {
+const addFeedback = () => {
     return (
         <div className="w-screen h-screen flex flex-col justify-center items-center">
             <div className="w-[33.75rem] mb-[4.25rem]">
-                <button className="h-[1.25rem ] text-b-14-g flex items-center">
-                <ArrowLeft className="mb-0.375 mr-[0.979rem]"/>
-                Go back
-                </button>
+                <GoBackBtn route='/'/>
             </div>
             <div className="w-[33.75rem] h-[41.063rem] rounded-[0.625rem] flex flex-col bg-white-normal items-center">
                 <div className="absolute w-[28.5rem] mt-[-1.75rem]">
@@ -80,4 +77,4 @@ const newFeedback = () => {
     );
 };
 
-export default newFeedback;
+export default addFeedback;

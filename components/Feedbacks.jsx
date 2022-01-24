@@ -1,26 +1,32 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import FeedbackCard from "./global/feedbackCard";
 import AppContext from "../context/AppContext";
-
+import EmptyFeedback from "./emptyFeedback";
 
 const Feedbacks = () => {
   const { filteredItems } = useContext(AppContext);
 
-
   return (
     <div>
-      {filteredItems.map((item, index) => {
-        return (
-          <FeedbackCard
-            key={`feedback${index}`}
-            title={item.title}
-            description={item.description}
-            category={item.category}
-            upvotes={item.upvotes}
-            comments={item.comments?.length}
-          />
-        );
-      })}
+      {filteredItems.length > 0 ? (
+        filteredItems.map((item, index) => {
+          return (
+            <FeedbackCard
+              key={`feedback${index}`}
+              id={item.id}
+              title={item.title}
+              description={item.description}
+              category={item.category}
+              upvotes={item.upvotes}
+              comments={item.comments?.length}
+              width="w-[51.563rem]"
+              textStyle="hover:cursor-pointer hover:underline"
+            />
+          );
+        })
+      ) : (
+        <EmptyFeedback />
+      )}
     </div>
   );
 };

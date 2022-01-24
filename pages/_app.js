@@ -1,3 +1,6 @@
+// TODO: can I improve sortItems func inside useEffect? I don't like setFilteredItems in every switch case.
+// TODO: if I pass props down through the map func, can I do it somehow with useContext directly to child component? Feedbacks --> feedbackCard --> upvoteBtn --> voteCounter
+
 import "../styles/globals.css";
 import AppContext from "../context/AppContext";
 import { useEffect, useState } from "react";

@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowUp from "./svg/ArrowUp";
+import VoteCounter from "./voteCounter";
 
-const UpvoteBtn = ({upvotes}) => {
+const UpvoteBtn = ({ upvotes }) => {
+  const [voted, setVoted] = useState(false);
+
+  const handleUpvote = () => {
+    setVoted(!voted);
+  };
+
   return (
-    <button className="flex flex-col justify-between pt-[0.875rem] pb-[0.5rem] items-center w-[2.5rem] h-[3.3rem] rounded-[0.625rem] bg-white-dark hover:bg-white-dark-hover text-b-13">
-        <ArrowUp />
-        {upvotes || 0}
+    <button
+      className={voted ? "upvote-btn_active" : "upvote-btn"}
+      onClick={handleUpvote}
+    >
+      <ArrowUp stroke={voted ? "#FFFFFF" : "#4661E6"} />
+      <VoteCounter upvotes={upvotes} voted={voted} />
     </button>
   );
 };
-
-
 
 export default UpvoteBtn;
