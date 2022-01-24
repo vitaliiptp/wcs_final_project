@@ -1,6 +1,4 @@
 import React from "react";
-import arrowUp from "../../assets/shared/icon-arrow-up.svg";
-import Image from "next/image";
 import ArrowUp from "./svg/ArrowUp";
 
 const UpvoteBtn = ({upvotes}) => {
