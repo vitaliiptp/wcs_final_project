@@ -2,16 +2,16 @@ import React, {useContext, useState} from "react";
 import ArrowUp from "./svg/ArrowUp";
 import AppContext from "../../context/AppContext";
 
-const UpvoteBtn = ({ id }) => {
+const UpvoteBtn = ({ upvotes, id }) => {
   const { filteredItems } = useContext(AppContext);
   const [voted, setVoted] = useState(false);
-  const [upvote, setUpvote] = useState(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes));
+  const [upvote, setUpvote] = useState(0);
 
 
   const handleUpvote = () => {
     setVoted(!voted);
-    if(!voted) setUpvote(upvote + 1);
-    else setUpvote(upvote - 1);
+    if(!voted) setUpvote(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes) + 1);
+    else setUpvote(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes) - 1);
   };
 
   return (
@@ -20,7 +20,7 @@ const UpvoteBtn = ({ id }) => {
       onClick={handleUpvote}
     >
       <ArrowUp stroke={voted ? "#FFFFFF" : "#4661E6"} />
-      {upvote}
+      {voted ? upvote : upvotes}
     </button>
   );
 };

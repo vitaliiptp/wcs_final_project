@@ -1,10 +1,11 @@
 import React from 'react';
+import Replies from "./replies";
 
-const CommentCard = ({ image, name, username, content }) => {
+const CommentCard = ({ image, name, username, content, replies }) => {
 
 
     return (
-      <div className="flex flex-row p-[2rem] bg-white-normal">
+      <div className="flex flex-row py-[2rem]">
         <div className="flex items-start justify-start pr-[2rem]">
           <img
             src="https://dummyimage.com/40x40/000/fff"
@@ -23,6 +24,7 @@ const CommentCard = ({ image, name, username, content }) => {
           <div>
             <p className="text-n-15">{content}</p>
           </div>
+            {replies && <Replies replies={replies}/>}
         </div>
       </div>
     );

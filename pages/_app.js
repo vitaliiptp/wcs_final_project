@@ -28,32 +28,29 @@ function MyApp({ Component, pageProps }) {
     setFilteredItems(items.filter((item) => item.category === category));
   };
 
+
   useEffect(() => {
     const sortItems = (sortCriteria) => {
       let sortedItems = [...filteredItems];
-      let sort;
       switch (sortCriteria) {
         case "Most Upvotes":
-          return setFilteredItems(
-            sortedItems.sort((a, b) => b.upvotes - a.upvotes)
-          );
+          sortedItems = sortedItems.sort((a, b) => b.upvotes - a.upvotes);
+          break;
         case "Least Upvotes":
-          return setFilteredItems(
-            sortedItems.sort((a, b) => a.upvotes - b.upvotes)
-          );
+          sortedItems = sortedItems.sort((a, b) => a.upvotes - b.upvotes);
+          break;
         case "Most Comments":
-          return setFilteredItems(
-            sortedItems.sort(
-              (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0)
-            )
-          );
+          sortedItems = sortedItems.sort(
+              (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
+          break;
         case "Least Comments":
-          return setFilteredItems(
-            sortedItems.sort(
-              (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0)
-            )
-          );
+          sortedItems = sortedItems.sort(
+              (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0));
+          break;
+        default:
+          sortedItems = [...filteredItems];
       }
+      setFilteredItems(sortedItems)
     };
     sortItems(sortCriteria);
   }, [sortCriteria]);

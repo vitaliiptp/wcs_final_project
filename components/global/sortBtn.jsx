@@ -14,7 +14,8 @@ const SortBtn = () => {
         id="sortOptions"
         onChange={(e) => setSortCriteria(e.target.value)}
       >
-        <option value="Most Upvotes">Most Upvotes</option>
+          <option value="Select Option">Select Option</option>
+          <option value="Most Upvotes">Most Upvotes</option>
         <option value="Least Upvotes">Least Upvotes</option>
         <option value="Most Comments">Most Comments</option>
         <option value="Least Comments">Least Comments</option>

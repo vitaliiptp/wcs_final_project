@@ -13,6 +13,7 @@ const FeedbackDetail = () => {
   const { items } = useContext(AppContext);
 
   const router = useRouter();
+  const feedback = items.filter((item) => item.id === parseInt(router.query.id))[0]
 
   return (
     <div className="flex justify-center">
@@ -26,23 +27,19 @@ const FeedbackDetail = () => {
           </Button>
         </div>
         <div className="flex flex-col">
-          {items
-            .filter((item, index) => item.id === parseInt(router.query.id))
-            .map((item, index) => (
-              <FeedbackCard
-                key={`feedback${index}`}
-                id={item.id}
-                title={item.title}
-                description={item.description}
-                category={item.category}
-                upvotes={item.upvotes}
-                comments={item.comments?.length}
-                width="w-[45.625rem]"
-                textStyle=""
-              />
-            ))}
+          <FeedbackCard
+            id={feedback.id}
+            title={feedback.title}
+            description={feedback.description}
+            category={feedback.category}
+            upvotes={feedback.upvotes}
+            comments={feedback.comments.length}
+            width="w-[45.625rem]"
+            mb="mb-[1.5rem]"
+            textStyle=""
+          />
         </div>
-        <Comments feedbackId="1"/>
+        <Comments feedbackId={feedback.id} />
         <AddComment />
       </div>
     </div>

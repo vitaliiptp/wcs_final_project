@@ -4,9 +4,9 @@ import UpvoteBtn from "./UpvoteBtn";
 import CategoryTag from "./categoryTag";
 import CommentBtn from "./CommentBtn";
 
-const FeedbackCard = ({ id, title, description, category, upvotes, comments, width, textStyle }) => {
+const FeedbackCard = ({ id, title, description, category, upvotes, comments, width, mb, textStyle }) => {
   return (
-    <div className={`flex flex-row mb-[20px] px-[2rem] py-[1.75rem] ${width} h-[9.438rem] rounded-[0.625rem] bg-white-normal`}>
+    <div className={`flex flex-row ${mb} px-[2rem] py-[1.75rem] ${width} h-[9.438rem] rounded-[0.625rem] bg-white-normal`}>
       <div className="flex flex-[10%] items-start justify-start">
         <UpvoteBtn upvotes={upvotes} id={id} />
       </div>

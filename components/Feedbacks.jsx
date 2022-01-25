@@ -20,6 +20,7 @@ const Feedbacks = () => {
               upvotes={item.upvotes}
               comments={item.comments?.length}
               width="w-[51.563rem]"
+              mb="mb-[1.25rem]"
               textStyle="hover:cursor-pointer hover:underline"
             />
           );

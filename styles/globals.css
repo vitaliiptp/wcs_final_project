@@ -27,6 +27,11 @@
         @apply font-bold text-[14px] text-grey-light;
     }
 
+    .text-b-15 {
+        @apply font-bold text-[14px] text-purple-normal;
+    }
+
+
     .text-b-16 {
         @apply font-bold text-[16px] text-blue-deep;
     }
