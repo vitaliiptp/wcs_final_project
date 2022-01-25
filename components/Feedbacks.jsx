@@ -4,7 +4,7 @@ import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 
 const Feedbacks = () => {
-  const { filteredItems } = useContext(AppContext);
+  const { filteredItems, items } = useContext(AppContext);
 
   return (
     <div>

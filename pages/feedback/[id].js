@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import GoBackBtn from "../../components/global/goBackBtn";
-import Button from "../../components/Buttons/button";
+import Button from "../../components/global/button";
 import Link from "next/link";
 import FeedbackCard from "../../components/global/feedbackCard";
 import AppContext from "../../context/AppContext";

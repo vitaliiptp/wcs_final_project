@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Buttons/button";
+import Button from "../components/global/button";
 import SortBtn from "../components/global/SortBtn";
 import Feedbacks from "../components/feedbacks";
 import ArrowLeft from "../components/global/svg/arrowLeft";

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Buttons/button";
+import Button from "./button";
 import Link from "next/link";
 
 const AddComment = () => {

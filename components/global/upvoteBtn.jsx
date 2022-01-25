@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import ArrowUp from "./svg/ArrowUp";
-import VoteCounter from "./voteCounter";
+import AppContext from "../../context/AppContext";
 
-const UpvoteBtn = ({ upvotes }) => {
+const UpvoteBtn = ({ id }) => {
+  const { filteredItems } = useContext(AppContext);
   const [voted, setVoted] = useState(false);
+  const [upvote, setUpvote] = useState(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes));
+
 
   const handleUpvote = () => {
     setVoted(!voted);
+    if(!voted) setUpvote(upvote + 1);
+    else setUpvote(upvote - 1);
   };
 
   return (
@@ -15,7 +20,7 @@ const UpvoteBtn = ({ upvotes }) => {
       onClick={handleUpvote}
     >
       <ArrowUp stroke={voted ? "#FFFFFF" : "#4661E6"} />
-      <VoteCounter upvotes={upvotes} voted={voted} />
+      {upvote}
     </button>
   );
 };

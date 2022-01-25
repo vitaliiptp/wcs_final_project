@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import Link from 'next/link'
 import SortBtn from "../global/sortBtn";
 import HeaderIcon from "./svg/headerIcon";
-import Button from "../Buttons/button";
+import Button from "./button";
 import AppContext from "../../context/AppContext";
 
 const Header = () => {

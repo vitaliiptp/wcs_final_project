@@ -1,7 +1,7 @@
 import React from "react";
 import IllustrationEmpty from "./global/svg/illustrationEmpty";
 import Link from "next/link";
-import Button from "./Buttons/button";
+import Button from "./global/button";
 
 const EmptyFeedback = () => {
   return (

@@ -31,6 +31,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const sortItems = (sortCriteria) => {
       let sortedItems = [...filteredItems];
+      let sort;
       switch (sortCriteria) {
         case "Most Upvotes":
           return setFilteredItems(
