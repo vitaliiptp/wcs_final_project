@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
-import GoBackBtn from "../../components/global/goBackBtn";
-import Button from "../../components/global/button";
+import GoBackBtn from "../../components/goBackBtn";
+import Button from "../../components/button";
 import Link from "next/link";
-import FeedbackCard from "../../components/global/feedbackCard";
+import FeedbackCard from "../../components/feedbackCard";
 import AppContext from "../../context/AppContext";
-import AddComment from "../../components/global/addComment";
-import CommentCard from "../../components/global/commentCard";
+import AddComment from "../../components/addComment";
+import CommentCard from "../../components/commentCard";
 import Comments from "../../components/comments";
 
 const FeedbackDetail = () => {

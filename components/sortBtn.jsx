@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import AppContext from "../../context/AppContext";
+import AppContext from "../context/AppContext";
 
 const SortBtn = () => {
   const { setSortCriteria } = useContext(AppContext);

@@ -1,8 +1,8 @@
 import React from "react";
 import Feedbacks from "../components/feedbacks";
-import LogoCard from "../components/global/logoCard";
+import LogoCard from "../components/logoCard";
 import FeedbackCategories from "../components/feedbackCategories";
-import Header from "../components/global/header";
+import Header from "../components/header";
 
 export default function Home() {
   return (

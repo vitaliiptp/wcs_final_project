@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import FeedbackCard from "./global/feedbackCard";
+import FeedbackCard from "./feedbackCard";
 import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 

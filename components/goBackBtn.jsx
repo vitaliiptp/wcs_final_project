@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import ArrowLeft from "./svg/arrowLeft";
+import ArrowLeft from "./global/svg/arrowLeft";
 
 const GoBackBtn = ({ route }) => {
   return (

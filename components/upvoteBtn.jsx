@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
-import ArrowUp from "./svg/ArrowUp";
-import AppContext from "../../context/AppContext";
+import ArrowUp from "./global/svg/arrowUp";
+import AppContext from "../context/AppContext";
 
 const UpvoteBtn = ({ upvotes, id }) => {
   const { filteredItems } = useContext(AppContext);

@@ -1,6 +1,6 @@
 import React from "react";
 import NewFeedback from "../components/global/svg/newFeedback";
-import GoBackBtn from "../components/global/goBackBtn";
+import GoBackBtn from "../components/goBackBtn";
 
 const addFeedback = () => {
     return (
