@@ -8,7 +8,7 @@ const Review = new Schema({
     upvotes: Number,
     status: String,
     description: String,
-    user: Schema.Types.ObjectId
+    userId: { type: Schema.Types.ObjectId, ref: "User" }
 })
 
 module.exports = mongoose.models.Review || mongoose.model('Review', Review);

@@ -10,8 +10,8 @@ const UpvoteBtn = ({ upvotes, id }) => {
 
   const handleUpvote = () => {
     setVoted(!voted);
-    if(!voted) setUpvote(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes) + 1);
-    else setUpvote(parseInt(filteredItems.filter(item => item.id === id)[0].upvotes) - 1);
+    if(!voted) setUpvote(parseInt(filteredItems.filter(item => item._id === id)[0].upvotes) + 1);
+    else setUpvote(parseInt(filteredItems.filter(item => item._id === id)[0].upvotes) - 1);
   };
 
   return (

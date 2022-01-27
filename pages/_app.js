@@ -1,16 +1,14 @@
-// TODO: can I improve sortItems func inside useEffect? I don't like setFilteredItems in every switch case.
-// TODO: if I pass props down through the map func, can I do it somehow with useContext directly to child component? Feedbacks --> feedbackCard --> upvoteBtn --> voteCounter
-
 import "../styles/globals.css";
 import AppContext from "../context/AppContext";
 import { useEffect, useState } from "react";
 import data from "../data.json";
 
 function MyApp({ Component, pageProps }) {
-  const [items, setItems] = useState(data.productRequests);
-  const [filteredItems, setFilteredItems] = useState(data.productRequests);
+  const [items, setItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
   const [filteredCategory, setFilteredCategory] = useState("All");
   const [sortCriteria, setSortCriteria] = useState("");
+  const [loading, setLoading] = useState(true);
   const categories = [
     "All",
     "UX",
@@ -18,16 +16,18 @@ function MyApp({ Component, pageProps }) {
     ...new Set(data.productRequests.map((item) => item.category)),
   ];
 
-  const filterItems = (category) => {
-    if (category === "All") {
-      setFilteredItems(items);
-      setFilteredCategory(category);
-      return;
-    }
-    setFilteredCategory(category);
-    setFilteredItems(items.filter((item) => item.category === category));
-  };
-
+  useEffect(() => {
+    fetch("http://localhost:3000/api/reviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setItems(data.data);
+        setFilteredItems(data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   useEffect(() => {
     const sortItems = (sortCriteria) => {
@@ -41,25 +41,36 @@ function MyApp({ Component, pageProps }) {
           break;
         case "Most Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
+            (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0)
+          );
           break;
         case "Least Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0));
+            (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0)
+          );
           break;
         default:
           sortedItems = [...filteredItems];
       }
-      setFilteredItems(sortedItems)
+      setFilteredItems(sortedItems);
     };
     sortItems(sortCriteria);
   }, [sortCriteria]);
+
+  const filterItems = (category) => {
+    if (category === "All") {
+      setFilteredItems(items);
+      setFilteredCategory(category);
+      return;
+    }
+    setFilteredCategory(category);
+    setFilteredItems(items.filter((item) => item.category === category));
+  };
 
   return (
     <div className="min-w-screen min-h-screen bg-body-background">
       <AppContext.Provider
         value={{
-          items: items,
           categories: categories,
           filteredItems: filteredItems,
           filteredCategory: filteredCategory,
@@ -67,6 +78,7 @@ function MyApp({ Component, pageProps }) {
           filterItems: filterItems,
           setSortCriteria: setSortCriteria,
           suggestionsCount: filteredItems.length,
+          loading: loading,
         }}
       >
         <Component {...pageProps} />

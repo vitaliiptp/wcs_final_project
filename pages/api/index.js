@@ -1,33 +1,31 @@
-import dbConnect from '../../middleware/connectDB'
-import Review from '../../models/Review'
+import nc from "next-connect";
+const controller = require("../../controllers/file.controller");
 
 
-/** Get method for Reviews schema */
 
-export default async function handler (req, res) {
-    const { method } = req
+// /** Example of routes to get/post the data from Google Cloud */
+// let routes = (app) => {
+//     router.post("/upload", controller.upload);
+//     router.get("/files", controller.getListFiles);
+//     router.get("/files/:name", controller.download);
+//
+//     app.use(router);
+// };
+//
+// module.exports = routes;
 
-    await dbConnect()
 
-    switch (method) {
-        case 'GET':
-            try {
-                const review = await Review.find({})
-                res.status(200).json({ success: true, data: review })
-            } catch (error) {
-                res.status(400).json({ success: false })
-            }
-            break
-        case 'POST':
-            try {
-                const review = await Review.create(req.body)
-                res.status(201).json({ success: true, data: review })
-            } catch (error) {
-                res.status(400).json({ success: false })
-            }
-            break
-        default:
-            res.status(400).json({ success: false })
-            break
-    }
-}
+/** Route to get user photos from Google Cloud */
+
+const handler = nc({
+    onError: (err, req, res, next) => {
+        console.error(err.stack);
+        res.status(500).end("Something broke!");
+    },
+    onNoMatch: (req, res, next) => {
+        res.status(404).end("Page is not found");
+    },
+})
+    .get(controller.getListFiles);
+
+export default handler;

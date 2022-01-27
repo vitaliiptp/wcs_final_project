@@ -13,7 +13,8 @@ const FeedbackDetail = () => {
   const { filteredItems } = useContext(AppContext);
 
   const router = useRouter();
-  const feedback = filteredItems.filter((item) => item.id === parseInt(router.query.id))[0]
+  const feedback = filteredItems.filter((item) => item._id === router.query.id)[0];
+  console.log(feedback)
 
   return (
     <div className="flex justify-center">
@@ -28,7 +29,7 @@ const FeedbackDetail = () => {
         </div>
         <div className="flex flex-col">
           <FeedbackCard
-            id={feedback.id}
+            id={feedback._id}
             title={feedback.title}
             description={feedback.description}
             category={feedback.category}
@@ -39,7 +40,7 @@ const FeedbackDetail = () => {
             textStyle=""
           />
         </div>
-        <Comments feedbackId={feedback.id} />
+        <Comments feedbackId={feedback._id} />
         <AddComment />
       </div>
     </div>

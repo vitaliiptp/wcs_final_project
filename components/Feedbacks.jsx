@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import FeedbackCard from "./feedbackCard";
 import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
-
+import Loader from "./loader";
 
 const Feedbacks = (props) => {
-  const { filteredItems } = useContext(AppContext);
+  const { filteredItems, loading } = useContext(AppContext);
 
   // const[reactData, setReactData] = useState({});
   // useEffect(() => {
@@ -20,15 +20,16 @@ const Feedbacks = (props) => {
   // console.log(props);
   // console.log(reactData);
 
-
   return (
     <div>
-      {filteredItems.length > 0 ? (
-        filteredItems.map((item, index) => {
+      {loading ? (
+        <Loader />
+      ) : filteredItems.length > 0 ? (
+        filteredItems.map((item) => {
           return (
             <FeedbackCard
-              key={`feedback${index}`}
-              id={item.id}
+              key={item._id}
+              id={item._id}
               title={item.title}
               description={item.description}
               category={item.category}

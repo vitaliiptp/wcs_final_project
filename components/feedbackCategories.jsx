@@ -9,7 +9,7 @@ const FeedbackCategories = () => {
       {categories.map((category, index) => {
         return (
           <button
-            key={index}
+            key={`category${index}`}
             className={
               category === filteredCategory
                 ? "filter-cat-btn_active"
