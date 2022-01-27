@@ -13,6 +13,7 @@ module.exports = {
       },
     },
     colors: {
+      'body-background': '#F2F2F2',
       'blue-normal': '#4661E6',
       'blue-normal-hover': '#7C91F9',
       'blue-light': '#62BCFA',
@@ -25,6 +26,7 @@ module.exports = {
       'purple-normal': '#AD1FEA',
       'purple-normal-hover': '#C75AF6',
       'purple-gradient': '#A337F6',
+      'purple-light': '#8C92B3',
       'red-normal': '#D73737',
       'red-normal-hover': '#E98888',
       'salmon-normal': '#F49F85',
@@ -32,7 +34,6 @@ module.exports = {
       'white-light': '#F7F8FD',
       'white-dark': '#F2F4FF',
       'white-dark-hover': '#CFD7FF',
-      'body-background': '#F2F2F2'
     },
   },
   plugins: [],
