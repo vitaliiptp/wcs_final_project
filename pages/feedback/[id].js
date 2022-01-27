@@ -10,10 +10,10 @@ import CommentCard from "../../components/commentCard";
 import Comments from "../../components/comments";
 
 const FeedbackDetail = () => {
-  const { items } = useContext(AppContext);
+  const { filteredItems } = useContext(AppContext);
 
   const router = useRouter();
-  const feedback = items.filter((item) => item.id === parseInt(router.query.id))[0]
+  const feedback = filteredItems.filter((item) => item.id === parseInt(router.query.id))[0]
 
   return (
     <div className="flex justify-center">

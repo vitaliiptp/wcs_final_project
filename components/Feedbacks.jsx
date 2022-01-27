@@ -1,10 +1,25 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import FeedbackCard from "./feedbackCard";
 import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 
-const Feedbacks = () => {
-  const { filteredItems, items } = useContext(AppContext);
+
+const Feedbacks = (props) => {
+  const { filteredItems } = useContext(AppContext);
+
+  // const[reactData, setReactData] = useState({});
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/api')
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         setReactData(data);
+  //       }).catch((err) => {console.log(err)});
+  // }, []);
+  //
+  //
+  // console.log(props);
+  // console.log(reactData);
+
 
   return (
     <div>
@@ -33,3 +48,19 @@ const Feedbacks = () => {
 };
 
 export default Feedbacks;
+
+// export async function getServerSideProps() {
+//   const res = await fetch("http://localhost:3000/api");
+//   const data = await res.json();
+//   console.log(data)
+//   if (!data) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+//   return {
+//     props: {
+//       reviews: data
+//     },
+//   };
+// }

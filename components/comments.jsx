@@ -3,9 +3,9 @@ import AppContext from "../context/AppContext";
 import CommentCard from "./commentCard";
 
 const Comments = ({ feedbackId }) => {
-  const { items } = useContext(AppContext);
+  const { filteredItems } = useContext(AppContext);
 
-  const commentsArray = items.filter(
+  const commentsArray = filteredItems.filter(
     (item) => item.id === parseInt(feedbackId)
   )[0].comments;
 
