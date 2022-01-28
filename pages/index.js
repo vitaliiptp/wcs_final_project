@@ -3,6 +3,7 @@ import Feedbacks from "../components/feedbacks";
 import LogoCard from "../components/global/logoCard";
 import FeedbackCategories from "../components/feedbackCategories";
 import Header from "../components/global/header";
+import RoadMapSidebar from "../components/global/roadMapSidebar";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="flex flex-col">
         <LogoCard />
         <FeedbackCategories />
+        <RoadMapSidebar />
       </div>
       <div className="flex flex-col">
         <Header />
