@@ -1,7 +1,7 @@
 import React from "react";
 import UpvoteRoadMap from "./upvoteRoadMap";
-import CategoryTag from "./categoryTag";
-import CommentBtn from "./CommentBtn";
+import CategoryTag from "../categoryTag";
+import CommentBtn from "../commentBtn";
 import StatusTag from "./statusTag";
 
 const FeedbackCard = ({status,title, description, category, upvotes, comments}) => {
