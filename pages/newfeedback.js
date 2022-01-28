@@ -7,8 +7,7 @@ import Textfield from "../components/global/Textfield";
 const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
 // Feedback Title 
 // Add a short, descriptive headline 
-
-
+// small changes
 
 const newFeedback = () => {
     return (
