@@ -14,7 +14,6 @@ const FeedbackDetail = () => {
 
   const router = useRouter();
   const feedback = filteredItems.filter((item) => item._id === router.query.id)[0];
-  console.log(feedback)
 
   return (
     <div className="flex justify-center">

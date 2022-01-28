@@ -18,3 +18,18 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+    // const res = await fetch("http://localhost:3000/api/reviews");
+    // const data = await res.json();
+    // if (!data) {
+    //   return {
+    //     notFound: true,
+    //   }
+    // }
+
+    console.log("test")
+    return {
+        props: {reviews: true}
+    };
+}

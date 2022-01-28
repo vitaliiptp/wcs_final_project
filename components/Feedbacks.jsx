@@ -4,23 +4,8 @@ import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 import Loader from "./loader";
 
-const Feedbacks = (props) => {
+const Feedbacks = (props,other) => {
   const { filteredItems, loading } = useContext(AppContext);
-
-  // const[reactData, setReactData] = useState({});
-
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/api/reviews')
-  //       .then(res => res.json())
-  //       .then(data => {
-  //         setReactData(data);
-  //         console.log(reactData);
-  //       }).catch((err) => {console.log(err)});
-  // }, []);
-
-
-  // console.log(props)
-
 
   return (
     <div>
@@ -52,17 +37,3 @@ const Feedbacks = (props) => {
 
 export default Feedbacks;
 
-// export async function getServerSideProps() {
-//   const res = await fetch("http://localhost:3000/api/reviews");
-//   const data = await res.json();
-//   if (!data) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-//   return {
-//     props: {
-//       reviews: data
-//     },
-//   };
-// }
