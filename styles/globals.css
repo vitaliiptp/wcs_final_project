@@ -6,6 +6,7 @@
 
 @layer components {
 
+<<<<<<< HEAD
   /* General text (b = bold, n = normal) : */
 
   .text-b-14-g {
@@ -79,69 +80,193 @@
     @apply h-2 rounded-t-[0.625rem] bg-purple-normal;
   }
 }
+=======
+    /* General text (b = bold, n = normal) : */
+    .text-b-13 {
+        @apply font-bold text-[13px] text-blue-deep;
+    }
 
+    .text-b-13_w {
+        @apply font-bold text-[13px] text-white-normal;
+    }
+
+    .text-b-14 {
+        @apply font-bold text-[14px] text-blue-deep;
+    }
+
+    .text-b-14_w {
+        @apply font-bold text-[14px] text-white-dark;
+    }
+
+    .text-b-14-g {
+        @apply font-bold text-[14px] text-grey-light;
+    }
+
+    .text-b-15 {
+        @apply font-bold text-[14px] text-purple-normal;
+    }
+
+
+    .text-b-16 {
+        @apply font-bold text-[16px] text-blue-deep;
+    }
+
+    .text-b-18 {
+        @apply font-bold text-[18px] text-blue-deep;
+    }
+
+    .text-b-18_w {
+        @apply font-bold text-[18px] text-white-normal;
+    }
+
+    .text-b-20 {
+        @apply font-bold text-[20px] text-blue-deep;
+    }
+
+    .text-b-20_w {
+        @apply font-bold text-[20px] text-white-normal;
+    }
+
+    .text-b-24 {
+        @apply font-bold text-[24px] text-blue-deep;
+    }
+
+    .text-sb-13 {
+        @apply font-semibold text-[13px] text-blue-normal;
+    }
+
+    .text-sb-13_w {
+        @apply font-semibold text-[13px] text-white-normal;
+    }
+
+    .text-n-13 {
+        @apply font-semibold text-[13px] text-grey-light;
+    }
+
+    .text-n-14 {
+        @apply font-normal text-[14px] text-grey-light;
+    }
+>>>>>>> 91aac8d67d0ced9ebd5224851696bd77059789ca
+
+    .text-n-14_w {
+        @apply font-normal text-[14px] text-white-dark;
+    }
+
+    .text-n-15 {
+        @apply font-normal text-[15px] text-grey-light;
+    }
+
+    .text-n-15_b {
+        @apply font-normal text-[15px] text-blue-deep;
+    }
+
+    .text-n-15_p {
+        @apply font-normal text-[15px] text-purple-light;
+    }
+
+    .text-n-15_w {
+        @apply font-normal text-[15px] text-white-normal;
+    }
+
+    .text-n-16 {
+        @apply font-normal text-[16px] text-grey-light;
+    }
+
+
+    /* Filter category buttons */
+    .filter-cat-btn {
+        @apply h-[1.875rem] rounded-[0.625rem] mr-[0.5rem] mb-[0.875rem] pt-[0.313rem] pb-[0.375rem] px-[1rem] bg-white-dark hover:bg-white-dark-hover text-sb-13;
+    }
+
+    .filter-cat-btn_active {
+        @apply h-[1.875rem] rounded-[0.625rem] mr-[0.5rem] mb-[0.875rem] pt-[0.313rem] pb-[0.375rem] px-[1rem] bg-blue-normal text-sb-13_w;
+    }
+
+    /* Upvote buttons */
+    .upvote-btn {
+       @apply flex flex-col justify-between pt-[0.875rem] pb-[0.5rem] items-center w-[2.5rem] h-[3.3rem] rounded-[0.625rem] bg-white-dark hover:bg-white-dark-hover text-b-13;
+    }
+
+    .upvote-btn_active {
+        @apply flex flex-col justify-between pt-[0.875rem] pb-[0.5rem] items-center w-[2.5rem] h-[3.3rem] rounded-[0.625rem] bg-blue-normal text-b-13_w;
+    }
+}
 
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*Button Component*/
 
-:root{
-  --purple : #AD1FEA;
-  --blue: #4661E6;
-  --delete : #D73737;
-  --cancel: darkblue;
+:root {
+    --purple: #AD1FEA;
+    --blue: #4661E6;
+    --delete: #D73737;
+    --cancel: darkblue;
 }
 
 .btn {
-  border-radius: 10px;
-  color:white;
+    border-radius: 10px;
+    color: white;
 
 }
+
 /*.btn:hover{
   opacity: 60%;
 }
 
 /*buttonStyle*/
-.btn--violet  {
-  background-color: var(--purple);
-}
-.btn--blue{
-  background-color: var(--blue);
-}
-.btn--delete{
-  background-color: var(--delete);
+.btn--violet {
+    background-color: var(--purple);
 }
 
-.btn--delete:hover{
-  background-color: #E98888 ;
+.btn--blue {
+    background-color: var(--blue);
+}
+
+.btn--delete {
+    background-color: var(--delete);
+}
+
+.btn--delete:hover {
+    background-color: #E98888;
 
 }
-.btn--cancel{
-  background-color: var(--cancel);
+
+.btn--cancel {
+    background-color: var(--cancel);
 }
+
 /*buttonSize*/
-.btn--large{
-  padding: 0.5rem 1.5rem;
-  font-weight: 500;
+.btn--large {
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
 }
+<<<<<<< HEAD
 .btn--medium{
   padding: 0.5rem 0.8rem;
   font-weight: 600;
   font-size: 12px;
 }
+=======
+
+.btn--medium {
+    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+    font-size: 12px;
+}
+>>>>>>> 91aac8d67d0ced9ebd5224851696bd77059789ca
