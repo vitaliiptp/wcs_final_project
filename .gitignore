@@ -34,7 +34,6 @@ yarn-error.log*
 .vercel
 
 # not useful components
-/components/global/textfield.jsx
 /components/global/label.jsx
 /components/global/labelDescription.jsx
 /pages/home.js
