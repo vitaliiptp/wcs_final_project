@@ -14,8 +14,9 @@ const CommentCard = ({
     <div className={`flex flex-row ${pt} pb-[1rem]`}>
       <div className="flex flex-col items-start justify-start mr-[1rem] ">
         <img
-          src={`https://storage.googleapis.com/feedback_app/user-images/${image}.jpg?`}
-          alt="user photo"
+          // src={`https://storage.googleapis.com/feedback_app/user-images/${image}.jpg`}
+            src={`/user-images/${image}.jpg`}
+            alt="user photo"
           className="w-[2.5rem] aspect-square rounded-full"
         />
       </div>
