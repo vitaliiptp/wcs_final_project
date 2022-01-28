@@ -59,6 +59,25 @@
   .text-sb-13 {
     @apply font-semibold text-[13px] text-blue-normal;
   }
+  /*Roadmap Status*/
+  .p--planned {
+    @apply my-auto mr-4 rounded-full bg-salmon-normal w-[0.5rem] h-[0.5rem];
+  }
+  .p--live {
+    @apply my-auto mr-4 rounded-full bg-blue-light w-[0.5rem] h-[0.5rem];
+  }
+  .p--progress {
+    @apply my-auto mr-4 rounded-full bg-purple-normal w-[0.5rem] h-[0.5rem];
+  }
+  .d--planned {
+    @apply h-2 rounded-t-[0.625rem] bg-salmon-normal;
+  }
+  .d--live {
+    @apply h-2 rounded-t-[0.625rem] bg-blue-light;
+  }
+  .d--progress {
+    @apply h-2 rounded-t-[0.625rem] bg-purple-normal;
+  }
 }
 
 

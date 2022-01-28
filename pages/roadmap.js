@@ -42,6 +42,7 @@ return (
                     return (
                         <RoadMapCard
                             key={`feedback${index}`}
+                            statusColor={"d--planned"}
                             status={item.status}
                             title={item.title}
                             description={item.description}
@@ -62,7 +63,9 @@ return (
                 {progress.map((item, index) => {
                     return (
                         <RoadMapCard
+
                             key={`feedback${index}`}
+                            statusColor={"d--progress"}
                             status={item.status}
                             title={item.title}
                             description={item.description}
@@ -84,6 +87,7 @@ return (
                     return (
                         <RoadMapCard
                             key={`feedback${index}`}
+                            statusColor={"d--live"}
                             status={item.status}
                             title={item.title}
                             description={item.description}
@@ -91,6 +95,7 @@ return (
                             upvotes={item.upvotes}
                             comments={item.comments?.length}
                         />
+                        
                     );
                  })}
             </div>
