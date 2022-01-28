@@ -1,11 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -27,6 +23,7 @@ module.exports = {
       'purple-normal-hover': '#C75AF6',
       'purple-gradient': '#A337F6',
       'purple-light': '#8C92B3',
+      'purple-light_tr': 'rgba(140,146,179,0.51)',
       'red-normal': '#D73737',
       'red-normal-hover': '#E98888',
       'salmon-normal': '#F49F85',

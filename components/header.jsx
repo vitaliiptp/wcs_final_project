@@ -1,8 +1,9 @@
 import React, {useContext} from "react";
-import SortBtn from "../global/sortBtn";
-import HeaderIcon from "./svg/headerIcon";
-import Button from "../Buttons/button";
-import AppContext from "../../context/AppContext";
+import Link from 'next/link'
+import SortBtn from "./sortBtn";
+import HeaderIcon from "./global/svg/headerIcon";
+import Button from "./button";
+import AppContext from "../context/AppContext";
 
 const Header = () => {
     const { suggestionsCount } = useContext(AppContext);
@@ -19,7 +20,9 @@ const Header = () => {
       </div>
       <div className="mr-[1rem] ml-[14.5rem]">
         <Button type="button" buttonStyle="btn--purple" buttonSize="btn--large">
-          + Add Feedback
+          <Link href="/add-feedback">
+            <a className="text-b-14_w">+ Add Feedback</a>
+          </Link>
         </Button>
       </div>
     </div>

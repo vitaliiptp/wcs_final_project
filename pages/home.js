@@ -1,8 +1,9 @@
 import React from "react";
-import Button from "../components/Buttons/button";
-import SortBtn from "../components/global/SortBtn";
+import Button from "../components/button";
+import SortBtn from "../components/sortBtn";
 import Feedbacks from "../components/feedbacks";
 import RoadMapSidebar from "../components/global/roadMapSidebar";
+import ArrowLeft from "../components/global/svg/arrowLeft";
 
 const Home = () => {
   return (
@@ -31,6 +32,10 @@ const Home = () => {
 
       <SortBtn />
         <Feedbacks />
+        <div className="flex flex-row justify-center items-center bg-purple-gradient">
+            <ArrowLeft />
+            <p>Go back</p>
+        </div>
     </div>
   );
 };
