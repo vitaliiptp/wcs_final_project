@@ -2,7 +2,9 @@ import React from "react";
 import Feedbacks from "../components/feedbacks";
 import Logo from "../components/logo";
 import FeedbackCategories from "../components/feedbackCategories";
+import RoadMapSidebar from "../components/global/roadMapSidebar";
 import Header from "../components/header";
+
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       <div className="flex flex-col">
         <Logo />
         <FeedbackCategories />
+        <RoadMapSidebar />
       </div>
       <div className="flex flex-col">
         <Header />

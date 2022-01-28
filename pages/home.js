@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../components/button";
 import SortBtn from "../components/sortBtn";
 import Feedbacks from "../components/feedbacks";
+import RoadMapSidebar from "../components/global/roadMapSidebar";
 import ArrowLeft from "../components/global/svg/arrowLeft";
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
       <div className="h-40 w-screen flex items-center justify-center bg-gradient-to-r from-blue-gradient via-purple-gradient to-pink-gradient font-medium text-6xl">
         Page for testing Tailwind
       </div>
+
+      <RoadMapSidebar/>
 
       <Button type="button" buttonStyle="btn--blue" buttonSize="btn--medium">
         Edit Feedback
