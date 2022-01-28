@@ -6,81 +6,8 @@
 
 @layer components {
 
-<<<<<<< HEAD
-  /* General text (b = bold, n = normal) : */
 
-  .text-b-14-g {
-    @apply font-bold text-[14px] text-grey-light;
-  }
-  .text-b-13 {
-    @apply font-bold text-[13px] text-blue-deep;
-  }
-  .text-b-14 {
-    @apply font-bold text-[14px] text-blue-deep;
-  }
-  .text-b-14_w {
-    @apply font-bold text-[14px] text-white-dark;
-  }
-  .text-b-16 {
-    @apply font-bold text-[16px] text-blue-deep;
-  }
-  .text-b-18 {
-    @apply font-bold text-[18px] text-blue-deep;
-  }
-  .text-b-18_w {
-    @apply font-bold text-[18px] text-white-normal;
-  }
-  .text-b-20 {
-    @apply font-bold text-[20px] text-blue-deep;
-  }
-  .text-b-20_w {
-    @apply font-bold text-[20px] text-white-normal;
-  }
-  .text-b-24 {
-    @apply font-bold text-[24px] text-blue-deep;
-  }
-  .text-n-13 {
-    @apply font-semibold text-[13px] text-grey-light;
-  }  
-  .text-n-14 {
-    @apply font-normal text-[14px] text-grey-light;
-  }
-  .text-n-14_w {
-    @apply font-normal text-[14px] text-white-dark;
-  }
-  .text-n-15 {
-    @apply font-normal text-[15px] text-grey-light;
-  }
-  .text-n-16 {
-    @apply font-normal text-[16px] text-grey-light;
-  }
-  .text-n-15_w {
-    @apply font-normal text-[15px] text-white-normal;
-  }
-  .text-sb-13 {
-    @apply font-semibold text-[13px] text-blue-normal;
-  }
-  /*Roadmap Status*/
-  .p--planned {
-    @apply my-auto mr-4 rounded-full bg-salmon-normal w-[0.5rem] h-[0.5rem];
-  }
-  .p--live {
-    @apply my-auto mr-4 rounded-full bg-blue-light w-[0.5rem] h-[0.5rem];
-  }
-  .p--progress {
-    @apply my-auto mr-4 rounded-full bg-purple-normal w-[0.5rem] h-[0.5rem];
-  }
-  .d--planned {
-    @apply h-2 rounded-t-[0.625rem] bg-salmon-normal;
-  }
-  .d--live {
-    @apply h-2 rounded-t-[0.625rem] bg-blue-light;
-  }
-  .d--progress {
-    @apply h-2 rounded-t-[0.625rem] bg-purple-normal;
-  }
-}
-=======
+ 
     /* General text (b = bold, n = normal) : */
     .text-b-13 {
         @apply font-bold text-[13px] text-blue-deep;
@@ -146,7 +73,6 @@
     .text-n-14 {
         @apply font-normal text-[14px] text-grey-light;
     }
->>>>>>> 91aac8d67d0ced9ebd5224851696bd77059789ca
 
     .text-n-14_w {
         @apply font-normal text-[14px] text-white-dark;
@@ -190,6 +116,26 @@
     .upvote-btn_active {
         @apply flex flex-col justify-between pt-[0.875rem] pb-[0.5rem] items-center w-[2.5rem] h-[3.3rem] rounded-[0.625rem] bg-blue-normal text-b-13_w;
     }
+      /*Roadmap Status*/
+    .p--planned {
+      @apply my-auto mr-4 rounded-full bg-salmon-normal w-[0.5rem] h-[0.5rem];
+    }
+    .p--live {
+      @apply my-auto mr-4 rounded-full bg-blue-light w-[0.5rem] h-[0.5rem];
+    }
+    .p--progress {
+      @apply my-auto mr-4 rounded-full bg-purple-normal w-[0.5rem] h-[0.5rem];
+    }
+    .d--planned {
+      @apply h-2 rounded-t-[0.625rem] bg-salmon-normal;
+    }
+    .d--live {
+      @apply h-2 rounded-t-[0.625rem] bg-blue-light;
+    }
+    .d--progress {
+      @apply h-2 rounded-t-[0.625rem] bg-purple-normal;
+    }
+
 }
 
 
@@ -225,48 +171,3 @@ a {
 
 }
 
-/*.btn:hover{
-  opacity: 60%;
-}
-
-/*buttonStyle*/
-.btn--violet {
-    background-color: var(--purple);
-}
-
-.btn--blue {
-    background-color: var(--blue);
-}
-
-.btn--delete {
-    background-color: var(--delete);
-}
-
-.btn--delete:hover {
-    background-color: #E98888;
-
-}
-
-.btn--cancel {
-    background-color: var(--cancel);
-}
-
-/*buttonSize*/
-.btn--large {
-    padding: 0.5rem 1.5rem;
-    font-weight: 500;
-}
-<<<<<<< HEAD
-.btn--medium{
-  padding: 0.5rem 0.8rem;
-  font-weight: 600;
-  font-size: 12px;
-}
-=======
-
-.btn--medium {
-    padding: 0.5rem 0.8rem;
-    font-weight: 600;
-    font-size: 12px;
-}
->>>>>>> 91aac8d67d0ced9ebd5224851696bd77059789ca

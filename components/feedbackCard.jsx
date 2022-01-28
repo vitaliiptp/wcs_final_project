@@ -1,7 +1,7 @@
 import React from "react";
 import Link from 'next/link'
 import UpvoteBtn from "./upvoteBtn";
-import CategoryTag from "./categoryTag";
+import CategoryTag from "./global/categoryTag";
 import CommentBtn from "./commentBtn";
 
 const FeedbackCard = ({ id, title, description, category, upvotes, comments, width, mb, textStyle }) => {

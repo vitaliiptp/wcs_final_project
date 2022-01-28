@@ -1,7 +1,7 @@
 import React from "react";
-import UpvoteBtn from "./upvoteBtn"
+import UpvoteBtn from "../upvoteBtn"
 import CategoryTag from "./categoryTag";
-import CommentBtn from "./CommentBtn";
+import CommentBtn from "../CommentBtn";
 import StatusTag from "./statusTag";
 
 const statusColor = [
