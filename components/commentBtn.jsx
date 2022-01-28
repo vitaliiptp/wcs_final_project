@@ -1,5 +1,5 @@
 import React from 'react';
-import Comments from "./svg/Comments";
+import Comments from "./global/svg/comments";
 
 const CommentBtn = ({comments}) => {
     return (
