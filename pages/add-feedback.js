@@ -1,6 +1,11 @@
 import React from "react";
 import NewFeedback from "../components/global/svg/newFeedback";
 import GoBackBtn from "../components/goBackBtn";
+import Dropdown from "../components/dropdown";
+import Textfield from "../components/textfield";
+
+const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
+
 
 const addFeedback = () => {
     return (
@@ -15,40 +20,8 @@ const addFeedback = () => {
                 <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
                     <span className="text-b-24">Create New Feedback</span>
                 </div>   
-                <div className="flex flex-col items-start mb-6">
-                    <label className="text-b-14" htmlFor="feedbackTitle">Feedback Title</label>
-                    <span className="text-n-14 mb-4">Add a short, descriptive headline</span>
-                    <input id="feedbackTitle" type="text" maxLength={46}
-                        className=" 
-                        m-0 
-                        w-[28.5rem]
-                        min-h-[3rem] 
-                        px-6 
-                        border-white-light 
-                        rounded-[0.313rem] 
-                        focus:border-blue-normal 
-                        invalid:border-red-normal 
-                        bg-white-light 
-                        text-blue-deep" 
-                    />
-                </div>
-                <div className="flex flex-col items-start mb-6">
-                    <label className="text-b-14" htmlFor="feedbackCategory">Category</label>
-                    <span className="text-n-14 mb-4">Choose a category for your feedback</span>
-                    <input id="feedbackCategory" type="text" maxLength={46}
-                        className=" 
-                        m-0 
-                        w-[28.5rem]
-                        min-h-[3rem] 
-                        px-6 
-                        border-white-light 
-                        rounded-[0.313rem] 
-                        focus:border-blue-normal 
-                        invalid:border-red-normal 
-                        bg-white-light 
-                        text-blue-deep" 
-                    />
-                </div>
+                <Textfield label='Feedback Title' description='Add a short, descriptive headline'/>
+                <Dropdown label='Category' description='Choose a category for your feedback' options={dropdownOptions}/>
                 <div className="flex flex-col items-start">
                     <label className="text-b-14" htmlFor="feedbackCategory">Feedback Detail</label>
                     <span className="text-n-14 mb-4">Include any specific comments on what should be improved, added, etc.</span>
