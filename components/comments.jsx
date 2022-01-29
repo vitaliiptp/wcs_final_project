@@ -1,13 +1,16 @@
-import React, { useContext } from "react";
+import React, {useContext, useState} from "react";
 import AppContext from "../context/AppContext";
 import CommentCard from "./commentCard";
 
 const Comments = ({ feedbackId }) => {
-  const { filteredItems } = useContext(AppContext);
+  const { filteredItems, comments } = useContext(AppContext);
 
   const commentsArray = filteredItems.filter(
     (item) => item.id === parseInt(feedbackId)
   )[0].comments;
+
+  const test = [...commentsArray, comments];
+    console.log("!!!!!!!!!!!!", test)
 
   return (
     <div className="rounded-[0.625rem] bg-white-normal mb-[1.5rem] px-[2rem] pb-[3rem]">
@@ -21,7 +24,7 @@ const Comments = ({ feedbackId }) => {
           commentsArray.map((comment, index) => (
             <CommentCard
               key={`comment${index}`}
-              image=""
+              image={comment.user.image}
               comment={comment}
             />
           ))}

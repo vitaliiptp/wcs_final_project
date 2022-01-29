@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, { useContext, useState } from "react";
 import Button from "./button";
-import Link from "next/link";
+import AppContext from "../context/AppContext";
 
-const AddComment = ({commentType = "comment"}) => {
-    const [newCommentText, setNewCommentText] = useState("");
+const AddComment = ({ commentType = "comment" }) => {
+  const { newCommentText, setNewCommentText, setComments } =
+    useContext(AppContext);
 
-    console.log(newCommentText)
+  console.log(newCommentText);
 
   return (
     <div className="w-full h-auto py-[1.5rem] px-[2rem] rounded-[0.625rem] bg-white-normal">
@@ -18,18 +19,23 @@ const AddComment = ({commentType = "comment"}) => {
           placeholder="Type your comment here"
           autoFocus={commentType === "reply"}
           className="bg-white-light text-n-15_b rounded-[0.3rem] w-full h-20 p-4 mb-[1rem]"
-          onChange={(e) => setNewCommentText(e.target.value)}
+          onChange={(e) =>
+            setNewCommentText({
+              content: e.target.value,
+            })
+          }
         />
         <div className="flex items-center justify-between">
-          <p className="text-n-15">{250 - newCommentText.length} Characters left</p>
+          <p className="text-n-15">
+            {250 - newCommentText.content.length} Characters left
+          </p>
           <Button
             type="button"
             buttonStyle="btn--purple"
             buttonSize="btn--large"
+            onClick={() => setComments(newCommentText)}
           >
-            <Link href="">
-              <a className="text-b-14_w">Post Comment</a>
-            </Link>
+            <a className="text-b-14_w">Post Comment</a>
           </Button>
         </div>
       </form>

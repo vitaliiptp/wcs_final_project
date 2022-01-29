@@ -7,6 +7,16 @@ import { useEffect, useState } from "react";
 import data from "../data.json";
 
 function MyApp({ Component, pageProps }) {
+  const [newCommentText, setNewCommentText] = useState({
+    id: 1,
+    content: "",
+    user: {
+      image: "/user-images/image-suzanne.jpg",
+      name: "Suzanne Chang",
+      username: "upbeat1811",
+    },
+  });
+  const [comments, setComments] = useState([]);
   const [items, setItems] = useState(data.productRequests);
   const [filteredItems, setFilteredItems] = useState(data.productRequests);
   const [filteredCategory, setFilteredCategory] = useState("All");
@@ -28,7 +38,6 @@ function MyApp({ Component, pageProps }) {
     setFilteredItems(items.filter((item) => item.category === category));
   };
 
-
   useEffect(() => {
     const sortItems = (sortCriteria) => {
       let sortedItems = [...filteredItems];
@@ -41,16 +50,18 @@ function MyApp({ Component, pageProps }) {
           break;
         case "Most Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
+            (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0)
+          );
           break;
         case "Least Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0));
+            (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0)
+          );
           break;
         default:
           sortedItems = [...filteredItems];
       }
-      setFilteredItems(sortedItems)
+      setFilteredItems(sortedItems);
     };
     sortItems(sortCriteria);
   }, [sortCriteria]);
@@ -59,6 +70,10 @@ function MyApp({ Component, pageProps }) {
     <div className="min-w-screen min-h-screen bg-body-background">
       <AppContext.Provider
         value={{
+          newCommentText: newCommentText,
+          comments: comments,
+          setComments: setComments,
+          setNewCommentText: setNewCommentText,
           items: items,
           categories: categories,
           filteredItems: filteredItems,

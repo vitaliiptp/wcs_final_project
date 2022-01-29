@@ -14,9 +14,9 @@ const CommentCard = ({
     <div className={`flex flex-row ${pt}`}>
       <div className="flex flex-col items-start justify-start mr-[1rem] ">
         <img
-          src="https://dummyimage.com/40x40/000/fff"
-          alt="user photo"
-          className="rounded-full "
+          src={image}
+          alt='users picture'
+          className="w-[2.5rem] aspect-square rounded-full"
         />
       </div>
       <div className="flex flex-col items-start w-full">
