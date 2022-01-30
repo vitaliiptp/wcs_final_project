@@ -4,6 +4,7 @@ import Logo from "../components/logo";
 import FeedbackCategories from "../components/feedbackCategories";
 import Header from "../components/header";
 
+
 export default function Home() {
   return (
     <div className="flex px-[10.3rem] py-[5.875rem]">

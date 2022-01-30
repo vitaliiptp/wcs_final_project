@@ -10,7 +10,7 @@ import CommentCard from "../../components/commentCard";
 import Comments from "../../components/comments";
 
 const FeedbackDetail = () => {
-  const { filteredItems } = useContext(AppContext);
+  const { filteredItems, selectedFeedback } = useContext(AppContext);
 
   const router = useRouter();
   const feedback = filteredItems.filter((item) => item.id === parseInt(router.query.id))[0]

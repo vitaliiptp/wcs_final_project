@@ -27,12 +27,12 @@ const CommentCard = ({
               {comment.user.username}
             </p>
           </div>
-          <button
-            className="text-sb-13"
-            onClick={() => setNewCommentForm(!newCommentForm)}
-          >
-            Reply
-          </button>
+          {/*<button*/}
+          {/*  className="text-sb-13"*/}
+          {/*  onClick={() => setNewCommentForm(!newCommentForm)}*/}
+          {/*>*/}
+          {/*  Reply*/}
+          {/*</button>*/}
         </div>
         <div>
           <p className="text-n-15 pb-[2rem]">

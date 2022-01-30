@@ -1,22 +1,11 @@
-// TODO: can I improve sortItems func inside useEffect? I don't like setFilteredItems in every switch case.
-// TODO: if I pass props down through the map func, can I do it somehow with useContext directly to child component? Feedbacks --> feedbackCard --> upvoteBtn --> voteCounter
-
 import "../styles/globals.css";
 import AppContext from "../context/AppContext";
 import { useEffect, useState } from "react";
 import data from "../data.json";
+import Favicon from "../components/favicon";
 
 function MyApp({ Component, pageProps }) {
-  const [newCommentText, setNewCommentText] = useState({
-    id: 1,
-    content: "",
-    user: {
-      image: "/user-images/image-suzanne.jpg",
-      name: "Suzanne Chang",
-      username: "upbeat1811",
-    },
-  });
-  const [comments, setComments] = useState([]);
+  const [selectedFeedback, setSelectedFeedback] = useState([]);
   const [items, setItems] = useState(data.productRequests);
   const [filteredItems, setFilteredItems] = useState(data.productRequests);
   const [filteredCategory, setFilteredCategory] = useState("All");
@@ -70,10 +59,8 @@ function MyApp({ Component, pageProps }) {
     <div className="min-w-screen min-h-screen bg-body-background">
       <AppContext.Provider
         value={{
-          newCommentText: newCommentText,
-          comments: comments,
-          setComments: setComments,
-          setNewCommentText: setNewCommentText,
+          selectedFeedback: selectedFeedback,
+          setSelectedFeedback: setSelectedFeedback,
           items: items,
           categories: categories,
           filteredItems: filteredItems,
@@ -84,6 +71,7 @@ function MyApp({ Component, pageProps }) {
           suggestionsCount: filteredItems.length,
         }}
       >
+        <Favicon />
         <Component {...pageProps} />
       </AppContext.Provider>
     </div>

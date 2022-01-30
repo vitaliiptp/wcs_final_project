@@ -1,27 +1,25 @@
-import React, {useContext, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../context/AppContext";
 import CommentCard from "./commentCard";
 
-const Comments = ({ feedbackId }) => {
-  const { filteredItems, comments } = useContext(AppContext);
+const Comments = () => {
+  const { selectedFeedback } = useContext(AppContext);
 
-  const commentsArray = filteredItems.filter(
-    (item) => item.id === parseInt(feedbackId)
-  )[0].comments;
+  useEffect(() => {
 
-  const test = [...commentsArray, comments];
-    console.log("!!!!!!!!!!!!", test)
+  }, []);
+
 
   return (
     <div className="rounded-[0.625rem] bg-white-normal mb-[1.5rem] px-[2rem] pb-[3rem]">
       <p className="pt-[1.5rem] text-b-18">
-        {commentsArray.length === 1
-          ? commentsArray.length + " Comment"
-          : commentsArray.length + " Comments"}
+        {selectedFeedback.comments.length === 1
+          ? selectedFeedback.comments.length + " Comment"
+          : selectedFeedback.comments.length + " Comments"}
       </p>
       <div className="divide-y divide-purple-light_tr">
-        {commentsArray &&
-          commentsArray.map((comment, index) => (
+        {selectedFeedback.comments &&
+        selectedFeedback.comments.map((comment, index) => (
             <CommentCard
               key={`comment${index}`}
               image={comment.user.image}
