@@ -57,6 +57,9 @@
     .text-b-24 {
         @apply font-bold text-[24px] text-blue-deep;
     }
+    .text-b-24_w {
+        @apply font-bold text-[24px] text-white-normal;
+    }
 
     .text-sb-13 {
         @apply font-semibold text-[13px] text-blue-normal;
@@ -171,3 +174,40 @@ a {
 
 }
 
+/*.btn:hover{
+  opacity: 60%;
+}
+
+/*buttonStyle*/
+.btn--violet {
+    background-color: var(--purple);
+}
+
+.btn--blue {
+    background-color: var(--blue);
+}
+
+.btn--delete {
+    background-color: var(--delete);
+}
+
+.btn--delete:hover {
+    background-color: #E98888;
+
+}
+
+.btn--cancel {
+    background-color: var(--cancel);
+}
+
+/*buttonSize*/
+.btn--large {
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn--medium {
+    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+    font-size: 12px;
+}
