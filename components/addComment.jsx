@@ -2,37 +2,56 @@ import React, { useContext, useState } from "react";
 import Button from "./button";
 import AppContext from "../context/AppContext";
 
-const AddComment = ({ commentType = "comment" }) => {
-  const [newCommentText, setNewCommentText] = useState('');
-  const { selectedFeedback, setSelectedFeedback } = useContext(AppContext);
+const AddComment = ({ commentType = "comment", replyingTo, setNewCommentForm }) => {
+  const [newCommentText, setNewCommentText] = useState("");
+  const { selectedFeedback, setSelectedFeedback, selectedCommentId } =
+    useContext(AppContext);
 
-    const handleNewComment = () => {
-        let tempFeedbackObj = selectedFeedback;
-        let newComment = {
-            id: tempFeedbackObj.comments.length + 1,
-            content: newCommentText,
-            user: {
-                image: "/user-images/image-suzanne.jpg",
-                name: "Suzanne Chang",
-                username: "upbeat1811",
-            }};
-        tempFeedbackObj.comments.push(newComment);
-        setSelectedFeedback(tempFeedbackObj);
-        setNewCommentText('');
-        console.log("!!!!!!!!!!!!", selectedFeedback)
+  const handleNewComment = () => {
+    let tempFeedbackObj = { ...selectedFeedback };
+    let newComment = {
+      id: tempFeedbackObj.comments.length + 1,
+      content: newCommentText,
+      user: {
+        image: "/user-images/image-zena.jpg",
+        name: "Zena Kelley",
+        username: "velvetround",
+      },
+    };
+    let newReply = [
+      {
+        content: newCommentText,
+        replyingTo: replyingTo,
+        user: {
+          image: "/user-images/image-zena.jpg",
+          name: "Zena Kelley",
+          username: "velvetround",
+        },
+      },
+    ];
+    if (commentType === "comment") {
+      tempFeedbackObj.comments.push(newComment);
+    }
+    if (commentType === "reply") {
+      tempFeedbackObj.comments.filter(
+        (comment) => comment.id === selectedCommentId
+      )[0].replies = newReply;
+      setNewCommentForm(false);
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
+    setSelectedFeedback(tempFeedbackObj);
+    setNewCommentText("");
+    console.log(selectedFeedback);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="w-full h-auto py-[1.5rem] px-[2rem] rounded-[0.625rem] bg-white-normal">
       <p className="text-b-18">Add Comment</p>
-      <form
-        className="mt-[1.5rem]"
-        onSubmit={handleSubmit}
-      >
+      <form className="mt-[1.5rem]" onSubmit={handleSubmit}>
         <textarea
           placeholder="Type your comment here"
           autoFocus={commentType === "reply"}

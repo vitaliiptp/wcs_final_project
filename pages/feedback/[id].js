@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { useRouter } from "next/router";
 import GoBackBtn from "../../components/goBackBtn";
 import Button from "../../components/button";
@@ -10,10 +10,7 @@ import CommentCard from "../../components/commentCard";
 import Comments from "../../components/comments";
 
 const FeedbackDetail = () => {
-  const { filteredItems, selectedFeedback } = useContext(AppContext);
-
-  const router = useRouter();
-  const feedback = filteredItems.filter((item) => item.id === parseInt(router.query.id))[0]
+  const { selectedFeedback } = useContext(AppContext);
 
   return (
     <div className="flex justify-center">
@@ -28,18 +25,18 @@ const FeedbackDetail = () => {
         </div>
         <div className="flex flex-col">
           <FeedbackCard
-            id={feedback.id}
-            title={feedback.title}
-            description={feedback.description}
-            category={feedback.category}
-            upvotes={feedback.upvotes}
-            comments={feedback.comments.length}
+            id={selectedFeedback.id}
+            title={selectedFeedback.title}
+            description={selectedFeedback.description}
+            category={selectedFeedback.category}
+            upvotes={selectedFeedback.upvotes}
+            comments={selectedFeedback.comments.length}
             width="w-[45.625rem]"
             mb="mb-[1.5rem]"
             textStyle=""
           />
         </div>
-        <Comments feedbackId={feedback.id} />
+        <Comments feedbackId={selectedFeedback.id} />
         <AddComment />
       </div>
     </div>

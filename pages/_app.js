@@ -6,6 +6,7 @@ import Favicon from "../components/favicon";
 
 function MyApp({ Component, pageProps }) {
   const [selectedFeedback, setSelectedFeedback] = useState([]);
+  const [selectedCommentId, setSelectedComment] = useState([]);
   const [items, setItems] = useState(data.productRequests);
   const [filteredItems, setFilteredItems] = useState(data.productRequests);
   const [filteredCategory, setFilteredCategory] = useState("All");
@@ -61,6 +62,8 @@ function MyApp({ Component, pageProps }) {
         value={{
           selectedFeedback: selectedFeedback,
           setSelectedFeedback: setSelectedFeedback,
+          selectedCommentId: selectedCommentId,
+            setSelectedComment: setSelectedComment,
           items: items,
           categories: categories,
           filteredItems: filteredItems,
