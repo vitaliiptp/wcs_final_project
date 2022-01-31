@@ -1,8 +1,11 @@
 import React from "react";
+
 import UpvoteBtn from "../upvoteBtn"
 import CategoryTag from "./categoryTag";
 import CommentBtn from "../CommentBtn";
 import Link from "next/link";
+import UpvoteRoadMap from "./upvoteRoadMap";
+
 
 
 const statusColor = [
