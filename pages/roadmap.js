@@ -72,7 +72,7 @@ return (
                             key={`feedback${index}`}
                             id={item.id}
                             statusColor={"d--progress"}
-                            status={item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+                            status={item.status.charAt(0,3).toUpperCase() + item.status.slice(1,3)+ item.status.charAt(3).toUpperCase()+ item.status.slice(4,11)}
                             stylePoint={"p--progress"}
                             title={item.title}
                             description={item.description}
