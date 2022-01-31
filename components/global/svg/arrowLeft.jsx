@@ -1,8 +1,8 @@
 import React from "react";
 
-const ArrowLeft = ({props}) => (
+const ArrowLeft = ({props, stroke}) => (
     <svg width={7} height={10} xmlns="http://www.w3.org/2000/svg" {...props}>
-        <path d="M6 9 2 5l4-4" stroke={"#4661E6"} strokeWidth={2} fill="none" />
+        <path d="M6 9 2 5l4-4" stroke={stroke} strokeWidth={2} fill="none" />
     </svg>
 )
 

@@ -20,7 +20,7 @@ return (
         <div className="mx-auto px-4 flex flex-row items-center justify-between w-[69.375rem] h-[7.063rem] mb-[1.5rem] rounded-[0.625rem] bg-blue-dark">
             <div className="pl-4">
                 <Link href={"/"} >
-                   <a className=" text-[14px]  hover:underline text-white-normal flex items-center mr-[0.979rem]"><ArrowLeft className="mr-[0.979rem]" stroke={'#fff'}/> Go Back</a> 
+                   <a className=" text-[14px]  hover:underline text-white-normal flex items-center mr-[0.979rem]"><ArrowLeft className="mr-[0.979rem]" stroke='#fff'/> Go Back</a> 
                 </Link>
                 <p className="text-b-24_w">Roadmap</p>
             </div>

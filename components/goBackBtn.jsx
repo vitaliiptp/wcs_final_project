@@ -6,7 +6,7 @@ const GoBackBtn = ({ route }) => {
   return (
     <Link href={route}>
       <button className="h-[1.25rem ] text-b-14-g flex items-center hover:underline">
-        <ArrowLeft className="mb-0.375 mr-[0.979rem]"/>
+        <ArrowLeft className="mb-0.375 mr-[0.979rem]" stroke="#4661E6" />
         Go Back
       </button>
     </Link>
@@ -14,3 +14,4 @@ const GoBackBtn = ({ route }) => {
 };
 
 export default GoBackBtn;
+
