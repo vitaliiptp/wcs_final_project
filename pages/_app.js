@@ -63,6 +63,7 @@ function MyApp({ Component, pageProps }) {
           categories: categories,
           filteredItems: filteredItems,
           filteredCategory: filteredCategory,
+          setItems: setItems,
           setFilteredCategory: setFilteredCategory,
           filterItems: filterItems,
           setSortCriteria: setSortCriteria,
