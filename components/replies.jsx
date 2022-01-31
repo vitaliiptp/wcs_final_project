@@ -6,7 +6,7 @@ const Replies = ({ replies }) => {
 
           <div className='border-l border-purple-light_tr pl-6'>
               {replies.map((reply, index) => (
-                  <CommentCard key={`reply${index}`} comment={reply} commentType='reply' pt="" />
+                  <CommentCard key={`reply${index}`} image={reply.user.image} comment={reply} commentType='reply' pt="" />
               ))}
           </div>
 

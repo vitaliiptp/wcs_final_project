@@ -1,12 +1,12 @@
-// TODO: can I improve sortItems func inside useEffect? I don't like setFilteredItems in every switch case.
-// TODO: if I pass props down through the map func, can I do it somehow with useContext directly to child component? Feedbacks --> feedbackCard --> upvoteBtn --> voteCounter
-
 import "../styles/globals.css";
 import AppContext from "../context/AppContext";
 import { useEffect, useState } from "react";
 import data from "../data.json";
+import Favicon from "../components/favicon";
 
 function MyApp({ Component, pageProps }) {
+  const [selectedFeedback, setSelectedFeedback] = useState([]);
+  const [selectedCommentId, setSelectedComment] = useState([]);
   const [items, setItems] = useState(data.productRequests);
   const [filteredItems, setFilteredItems] = useState(data.productRequests);
   const [filteredCategory, setFilteredCategory] = useState("All");
@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps }) {
     setFilteredItems(items.filter((item) => item.category === category));
   };
 
-
   useEffect(() => {
     const sortItems = (sortCriteria) => {
       let sortedItems = [...filteredItems];
@@ -41,16 +40,18 @@ function MyApp({ Component, pageProps }) {
           break;
         case "Most Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
+            (a, b) => (b.comments?.length || 0) - (a.comments?.length || 0)
+          );
           break;
         case "Least Comments":
           sortedItems = sortedItems.sort(
-              (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0));
+            (a, b) => (a.comments?.length || 0) - (b.comments?.length || 0)
+          );
           break;
         default:
           sortedItems = [...filteredItems];
       }
-      setFilteredItems(sortedItems)
+      setFilteredItems(sortedItems);
     };
     sortItems(sortCriteria);
   }, [sortCriteria]);
@@ -59,6 +60,10 @@ function MyApp({ Component, pageProps }) {
     <div className="min-w-screen min-h-screen bg-body-background">
       <AppContext.Provider
         value={{
+          selectedFeedback: selectedFeedback,
+          setSelectedFeedback: setSelectedFeedback,
+          selectedCommentId: selectedCommentId,
+            setSelectedComment: setSelectedComment,
           items: items,
           categories: categories,
           filteredItems: filteredItems,
@@ -69,6 +74,7 @@ function MyApp({ Component, pageProps }) {
           suggestionsCount: filteredItems.length,
         }}
       >
+        <Favicon />
         <Component {...pageProps} />
       </AppContext.Provider>
     </div>

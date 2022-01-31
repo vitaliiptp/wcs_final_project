@@ -7,7 +7,7 @@ import Textfield from "../components/textfield";
 const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
 
 
-const addFeedback = () => {
+const AddFeedback = () => {
     return (
         <div className="w-screen h-screen flex flex-col justify-center items-center">
             <div className="w-[33.75rem] mb-[4.25rem]">
@@ -50,4 +50,4 @@ const addFeedback = () => {
     );
 };
 
-export default addFeedback;
+export default AddFeedback;
