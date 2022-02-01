@@ -30,7 +30,7 @@ const FeedbackDetail = () => {
             description={selectedFeedback.description}
             category={selectedFeedback.category}
             upvotes={selectedFeedback.upvotes}
-            comments={selectedFeedback.comments.length}
+            comments={selectedFeedback.comments?.length}
             width="w-[45.625rem]"
             mb="mb-[1.5rem]"
             textStyle=""
