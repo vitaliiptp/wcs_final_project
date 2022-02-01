@@ -7,11 +7,11 @@ import ArrowLeft from "../components/global/svg/arrowLeft"
 
 
 const RoadMap = () => {
-    const { items, setItems } = useContext(AppContext);
+    const { filteredItems } = useContext(AppContext);
   
-    const planned = items.filter((item)=>item.status === "planned");
-    const progress = items.filter((item)=>item.status === "in-progress");
-    const live = items.filter((item)=>item.status === "live");
+    const planned = filteredItems.filter((item)=>item.status === "planned");
+    const progress = filteredItems.filter((item)=>item.status === "in-progress");
+    const live = filteredItems.filter((item)=>item.status === "live");
 
 
 return (
@@ -37,7 +37,7 @@ return (
         <div className=" flex -row w-[69.375rem] mx-auto my-4">
             <div className="flex-col w-4/12">
                 <div className="mb-[1.5rem]">
-                    <p className="text-b-18">Planned ({items.filter(function(item) { return item.status === "planned" }).length})</p>
+                    <p className="text-b-18">Planned ({filteredItems.filter(function(item) { return item.status === "planned" }).length})</p>
                     <p className="text-n-16">Ideas prioritized for research </p>
                 </div>
             
@@ -61,7 +61,7 @@ return (
             
             <div className="flex-col w-4/12 mx-[1.5rem]">
                 <div className="mb-[1.5rem]">
-                    <p className="text-b-18">In-Progess ({items.filter(function(item) { return item.status === "in-progress" }).length})</p>
+                    <p className="text-b-18">In-Progess ({filteredItems.filter(function(item) { return item.status === "in-progress" }).length})</p>
                     <p className="text-n-16">Currently being developed </p>
                 </div>
                 
@@ -88,7 +88,7 @@ return (
             
             <div className="flex-row w-4/12">
                 <div className="mb-[1.5rem]">
-                    <p className="text-b-18">Live ({items.filter(function(item) { return item.status === "live" }).length})</p>
+                    <p className="text-b-18">Live ({filteredItems.filter(function(item) { return item.status === "live" }).length})</p>
                     <p className="text-n-16">Released features </p>
                 </div>
 

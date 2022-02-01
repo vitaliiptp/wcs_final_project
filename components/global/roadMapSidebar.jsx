@@ -6,7 +6,7 @@ import AppContext from "../../context/AppContext";
 
 
 function RoadMapSidebar() {
-    const { items, setItems } = useContext(AppContext);
+    const { filteredItems } = useContext(AppContext);
   
 
   return (
@@ -24,7 +24,7 @@ function RoadMapSidebar() {
                     <p className='text-n-16'>Planned</p>
                 </div>
                 <div className='text-b-16'>
-                    {items.filter(function(item) { return item.status === "planned" }).length}
+                    {filteredItems.filter(function(item) { return item.status === "planned" }).length}
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ function RoadMapSidebar() {
                     <p className='text-n-16'>In-Progress</p>
                 </div>
                 <div className='text-b-16'>
-                    {items.filter(function(item) { return item.status === "in-progress" }).length}
+                    {filteredItems.filter(function(item) { return item.status === "in-progress" }).length}
                 </div>
             </div>
 
@@ -44,7 +44,7 @@ function RoadMapSidebar() {
                     <p className='text-n-16'>Live</p>
                 </div>
                 <div className='text-b-16'>
-                    {items.filter(function(item) { return item.status === "live" }).length}
+                    {filteredItems.filter(function(item) { return item.status === "live" }).length}
                 </div>
             </div>
         
