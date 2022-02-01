@@ -9,7 +9,6 @@ import Link from 'next/link';
 
 const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
 
-
 const addFeedback = () => {
 
     const Context = useContext(AppContext);
@@ -39,9 +38,6 @@ const addFeedback = () => {
 
         Context.setFilteredItems(prevContext => [...prevContext, newFeedbackObject])
     };
-
-
-    
 
     return (
         <div className="w-screen h-screen flex flex-col justify-center items-center">

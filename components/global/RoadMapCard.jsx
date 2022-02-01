@@ -1,26 +1,45 @@
 import React from "react";
-import UpvoteRoadMap from "./upvoteRoadMap";
-import CategoryTag from "../categoryTag";
-import CommentBtn from "../commentBtn";
-import StatusTag from "./statusTag";
 
-const FeedbackCard = ({status,title, description, category, upvotes, comments}) => {
+import UpvoteBtn from "../upvoteBtn"
+import CategoryTag from "./categoryTag";
+import CommentBtn from "../CommentBtn";
+import Link from "next/link";
+
+
+
+const statusColor = [
+    "d--planned",
+    "d--live",
+    "d--progress",
+]
+const stylePoint = [
+  "p--planned",
+  "p--live",
+  "p--progress",
+]
+const RoadMapCard = ({id,status,statusColor,stylePoint,title, description, category, upvotes, comments}) => {
   return (
-    <div className="flex flex-col mb-[1.25rem] px-[2rem] py-[1.75rem] rounded-[0.625rem] bg-white-normal">
-      <div className="flex  items-start justify-start">
-        <StatusTag status={status.charAt(0).toUpperCase() + status.slice(1)}/>
+      <div className="">
+    <div className={statusColor} ></div>
+    <div className="flex flex-col mb-[1.25rem] px-[2rem] py-[1.75rem] rounded-b-[0.625rem] bg-white-normal">
+      <div className='flex  mb-4'>
+        <div className={stylePoint}></div>
+        <div className='text-n-16'>{status}</div>
       </div>
       <div className="flex  flex-col justify-between items-start">
-          <p className="text-b-18 pb-2">{title}</p>
+          <Link  href={`/feedback/${id}`} >
+              <a className="text-b-18 pb-2 hover:text-blue-normal">{title}</a>
+          </Link>
           <p className="text-n-16 pb-2">{description}</p>
           <CategoryTag classname="pb-2" category={category.charAt(0).toUpperCase() + category.slice(1)}/>
       </div>
-      <div className="flex justify-between items-start my-2">
-        <UpvoteRoadMap upvotes={upvotes}/>
+      <div className="flex justify-between items-center my-2">
+        <UpvoteBtn upvotes={upvotes}/>
         <CommentBtn  comments={comments}/>
       </div>
+    </div>
     </div>
   );
 };
 
-export default FeedbackCard;
+export default RoadMapCard;
