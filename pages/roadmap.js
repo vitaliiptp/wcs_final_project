@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import RoadMapCard from "../components/global/roadMapCard";
+import RoadMapCard from "../components/roadMapCard";
 import AppContext from "../context/AppContext";
 import Button from "../components/button";
 import Link from "next/link";

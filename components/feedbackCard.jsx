@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Link from "next/link";
 import UpvoteBtn from "./upvoteBtn";
-import CategoryTag from "./global/categoryTag";
+import CategoryTag from "./categoryTag";
 import CommentBtn from "./commentBtn";
 import AppContext from "../context/AppContext";
 
