@@ -1,5 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
-import { useRouter } from "next/router";
+import React, { useContext } from "react";
 import GoBackBtn from "../../components/goBackBtn";
 import Button from "../../components/button";
 import Link from "next/link";

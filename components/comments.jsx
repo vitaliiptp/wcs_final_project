@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 import CommentCard from "./commentCard";
 
@@ -12,8 +12,9 @@ const Comments = () => {
           (selectedFeedback.comments.length === 1
             ? selectedFeedback.comments.length + " Comment"
             : selectedFeedback.comments.length + " Comments")}
-          {!selectedFeedback.comments &&
-          (<p className="flex justify-center">No comments yet</p>)}
+        {!selectedFeedback.comments && (
+          <p className="flex justify-center">No comments yet</p>
+        )}
       </p>
       <div className="divide-y divide-purple-light_tr">
         {selectedFeedback.comments &&

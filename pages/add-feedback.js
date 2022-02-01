@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
 
-const addFeedback = () => {
+const AddFeedback = () => {
 
     const Context = useContext(AppContext);
 
@@ -80,4 +80,4 @@ const addFeedback = () => {
     );
 };
 
-export default addFeedback;
+export default AddFeedback;

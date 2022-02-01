@@ -14,4 +14,3 @@ const GoBackBtn = ({ route }) => {
 };
 
 export default GoBackBtn;
-

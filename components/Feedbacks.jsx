@@ -1,10 +1,9 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext } from "react";
 import FeedbackCard from "./feedbackCard";
 import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 
-
-const Feedbacks = (props) => {
+const Feedbacks = () => {
   const { filteredItems } = useContext(AppContext);
 
   return (
