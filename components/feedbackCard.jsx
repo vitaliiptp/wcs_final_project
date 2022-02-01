@@ -43,7 +43,7 @@ const FeedbackCard = ({
 
         <p className="text-n-16">{description}</p>
         <CategoryTag
-          category={category.charAt(0).toUpperCase() + category.slice(1)}
+          category={category?.charAt(0).toUpperCase() + category?.slice(1)}
         />
       </div>
       <div className="flex flex-[10%] justify-end">
