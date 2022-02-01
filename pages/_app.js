@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }) {
     setFilteredItems(items.filter((item) => item.category === category));
   };
 
+
   useEffect(() => {
     const sortItems = (sortCriteria) => {
       let sortedItems = [...filteredItems];
