@@ -27,9 +27,9 @@ export default function AddEditFeedback() {
 
     console.log("filteredItems", filteredItems);
     const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex]?.title);
-    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex].category);
-    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex].status);
-    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex].description);
+    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex]?.category);
+    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex]?.status);
+    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex]?.description);
 
     // create property list of dropdowns
     const dropdownCategory = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
@@ -38,9 +38,9 @@ export default function AddEditFeedback() {
     // BUTTON "Cancel" logic:
     function dropEdition() {
         setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex]?.title)
-        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex].category)
-        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex].status)
-        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex].description)
+        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex]?.category)
+        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex]?.status)
+        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex]?.description)
     };
 
     // BUTTON "Edit Feedback" logic:
@@ -50,10 +50,10 @@ export default function AddEditFeedback() {
             id: parseInt(feedbackId),
             title: editedFeedbackTitle,
             category: editedFeedbackCategory,
-            upvotes: filteredItems[feedbackIndex].upvotes,
+            upvotes: filteredItems[feedbackIndex]?.upvotes,
             status: editedFeedbackStatus,
             description: editedFeedbackDescription,
-            comments: filteredItems[feedbackIndex].comments
+            comments: filteredItems[feedbackIndex]?.comments
         }
         // copy whole thing - context stuff
         const copyOfAllElements = [...filteredItems]
