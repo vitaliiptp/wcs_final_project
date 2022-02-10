@@ -26,10 +26,10 @@ export default function AddEditFeedback() {
     // where the default values are the existing ones from Context
 
     console.log("filteredItems", filteredItems);
-    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex]?.title);
-    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex]?.category);
-    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex]?.status);
-    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex]?.description);
+    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex].title);
+    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex].category);
+    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex].status);
+    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex].description);
 
     // create property list of dropdowns
     const dropdownCategory = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
