@@ -37,10 +37,10 @@ export default function AddEditFeedback() {
 
     // BUTTON "Cancel" logic:
     function dropEdition() {
-        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex]?.title)
-        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex]?.category)
-        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex]?.status)
-        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex]?.description)
+        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex].title)
+        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex].category)
+        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex].status)
+        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex].description)
     };
 
     // BUTTON "Edit Feedback" logic:
@@ -79,7 +79,7 @@ export default function AddEditFeedback() {
                     <EditFeedbackIcon />
                 </div>
                 <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
-                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex].title}'`}</span>
+                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex]?.title}'`}</span>
                 </div>
                 <Textfield
                     label='Feedback Title'
