@@ -2,7 +2,7 @@ import React from "react";
 import Feedbacks from "../components/feedbacks";
 import Logo from "../components/logo";
 import FeedbackCategories from "../components/feedbackCategories";
-import RoadMapSidebar from "../components/global/roadMapSidebar";
+import RoadMapSidebar from "../components/roadMapSidebar";
 import Header from "../components/header";
 
 

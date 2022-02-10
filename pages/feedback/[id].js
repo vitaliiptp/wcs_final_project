@@ -6,7 +6,6 @@ import Link from "next/link";
 import FeedbackCard from "../../components/feedbackCard";
 import AppContext from "../../context/AppContext";
 import AddComment from "../../components/addComment";
-import CommentCard from "../../components/commentCard";
 import Comments from "../../components/comments";
 
 const FeedbackDetail = () => {
@@ -41,9 +40,9 @@ const FeedbackDetail = () => {
             id={selectedFeedback.id}
             title={selectedFeedback.title}
             description={selectedFeedback.description}
-            category={selectedFeedback.category}
+            category={selectedFeedback?.category}
             upvotes={selectedFeedback.upvotes}
-            comments={selectedFeedback.comments.length}
+            comments={selectedFeedback.comments?.length}
             width="w-[45.625rem]"
             mb="mb-[1.5rem]"
             textStyle=""

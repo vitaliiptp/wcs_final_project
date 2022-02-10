@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext } from "react";
 import FeedbackCard from "./feedbackCard";
 import AppContext from "../context/AppContext";
 import EmptyFeedback from "./emptyFeedback";
 
-
-const Feedbacks = (props) => {
+const Feedbacks = () => {
   const { filteredItems } = useContext(AppContext);
+
 
   return (
     <div>
@@ -22,7 +22,7 @@ const Feedbacks = (props) => {
               comments={item.comments?.length}
               width="w-[51.563rem]"
               mb="mb-[1.25rem]"
-              textStyle="hover:cursor-pointer hover:underline"
+              textStyle="hover:cursor-pointer hover:text-blue-normal"
             />
           );
         })
