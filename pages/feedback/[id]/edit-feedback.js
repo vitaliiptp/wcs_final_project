@@ -26,7 +26,7 @@ export default function AddEditFeedback() {
     // where the default values are the existing ones from Context
 
     console.log("filteredItems", filteredItems);
-    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex].title);
+    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex]?.title);
     const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex].category);
     const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex].status);
     const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex].description);
@@ -37,7 +37,7 @@ export default function AddEditFeedback() {
 
     // BUTTON "Cancel" logic:
     function dropEdition() {
-        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex].title)
+        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex]?.title)
         setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex].category)
         setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex].status)
         setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex].description)
@@ -59,7 +59,7 @@ export default function AddEditFeedback() {
         const copyOfAllElements = [...filteredItems]
 
         // i pick the one from the copy version i want to edit 
-        const itemIndex = copyOfAllElements.findIndex((item) => feedbackId == item.id)
+        const itemIndex = copyOfAllElements.findIndex((item) => feedbackId === item.id)
 
         // pick the on ei want to edit - overwritting it x = c, x = b
         copyOfAllElements[itemIndex] = editedFeedback
@@ -79,7 +79,7 @@ export default function AddEditFeedback() {
                     <EditFeedbackIcon />
                 </div>
                 <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
-                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex].title}'`}</span>
+                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex]?.title}'`}</span>
                 </div>
                 <Textfield
                     label='Feedback Title'
