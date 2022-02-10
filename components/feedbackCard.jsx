@@ -8,9 +8,12 @@ import AppContext from "../context/AppContext";
 const FeedbackCard = ({ id, title, description, category, upvotes, comments, width, mb, textStyle }) => {
     const { filteredItems, setSelectedFeedback } = useContext(AppContext);
 
-    const handleFeedbackSelection = () => {
+  // User handling selection - bad
+  // page handling selection - good
+  // no need oncklick function
+    /*const handleFeedbackSelection = () => {
         setSelectedFeedback(filteredItems.filter((item) => item.id === parseInt(id))[0]);
-    }
+    }*/
 
     return (
     <div className={`flex flex-row ${mb} px-[2rem] py-[1.75rem] ${width} h-[9.438rem] rounded-[0.625rem] bg-white-normal`}>
@@ -19,7 +22,7 @@ const FeedbackCard = ({ id, title, description, category, upvotes, comments, wid
       </div>
       <div className="flex flex-[80%] flex-col justify-between items-start">
           <Link href={`/feedback/${id}`} >
-              <p className={`text-b-18 ${textStyle}`} onClick={handleFeedbackSelection}>{title}</p>
+              <p className={`text-b-18 ${textStyle}`}>{title}</p>
           </Link>
 
           <p className="text-n-16">{description}</p>

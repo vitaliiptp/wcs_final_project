@@ -74,7 +74,7 @@ export default function addEditFeedback() {
             <div className="w-[33.75rem] mb-[4.25rem]">
                 <GoBackBtn route={`/feedback/${feedbackId}`} />
             </div>
-            <div className="w-[33.75rem] h-[41.063rem] rounded-[0.625rem] flex flex-col bg-white-normal items-center">
+            <div className="w-[33.75rem] h-[50rem] rounded-[0.625rem] flex flex-col bg-white-normal items-center mb-5">
                 <div className="absolute w-[28.5rem] mt-[-1.75rem]">
                     <EditFeedbackIcon />
                 </div>
@@ -103,10 +103,9 @@ export default function addEditFeedback() {
                     description='Include any specific comments on what should be improved, added, etc.'
                     input={editedFeedbackDescription}
                     setInput={setEditedFeedbackDescription} />
-                <div className="w-[28.5rem] h-full flex justify-end items-center">
+                <div className="w-[28.5rem] h-full flex justify-end items-center pd-5">
                     <div className="">
                         <button onClick={dropEdition} className="mr-4 rounded-[0.625rem] px-6 pb-[0.719rem] pt-[0.781rem] bg-blue-deep hover:bg-blue-deep-hover text-b-14_w">Cancel</button>
-
                         <button onClick={addEditedFeedbackToContext} className="rounded-[0.625rem] px-6 pb-[0.719rem] pt-[0.781rem] bg-purple-normal hover:bg-purple-normal-hover text-b-14_w">Add Feedback</button>
                     </div>
                 </div>
