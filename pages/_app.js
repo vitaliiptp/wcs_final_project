@@ -5,7 +5,7 @@ import data from "../data.json";
 import Favicon from "../components/favicon";
 
 function MyApp({ Component, pageProps }) {
-  const [selectedFeedback, setSelectedFeedback] = useState([]);
+  const [selectedFeedback, setSelectedFeedback] = useState(null);
   const [selectedCommentId, setSelectedComment] = useState([]);
   const [items, setItems] = useState(data.productRequests);
   const [filteredItems, setFilteredItems] = useState(data.productRequests);
@@ -55,6 +55,7 @@ function MyApp({ Component, pageProps }) {
       setFilteredItems(sortedItems);
     };
     sortItems(sortCriteria);
+
   }, [sortCriteria]);
 
   return (
@@ -64,7 +65,7 @@ function MyApp({ Component, pageProps }) {
           selectedFeedback: selectedFeedback,
           setSelectedFeedback: setSelectedFeedback,
           selectedCommentId: selectedCommentId,
-            setSelectedComment: setSelectedComment,
+          setSelectedComment: setSelectedComment,
           items: items,
           categories: categories,
           filteredItems: filteredItems,
