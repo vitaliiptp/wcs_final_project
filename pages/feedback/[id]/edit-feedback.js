@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import AppContext from '../../../context/AppContext';
 
 
-export default function addEditFeedback() {
+export default function AddEditFeedback() {
 
     // get ID of Feedback out of HTTP-Query
     const router = useRouter();
