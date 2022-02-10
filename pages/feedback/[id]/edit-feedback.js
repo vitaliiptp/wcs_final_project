@@ -26,10 +26,10 @@ export default function AddEditFeedback() {
     // where the default values are the existing ones from Context
 
     console.log("filteredItems", filteredItems);
-    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex].title);
-    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex].category);
-    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex].status);
-    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex].description);
+    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex]?.title);
+    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex]?.category);
+    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex]?.status);
+    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex]?.description);
 
     // create property list of dropdowns
     const dropdownCategory = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
@@ -37,10 +37,10 @@ export default function AddEditFeedback() {
 
     // BUTTON "Cancel" logic:
     function dropEdition() {
-        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex]?.title)
-        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex]?.category)
-        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex]?.status)
-        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex]?.description)
+        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex].title)
+        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex].category)
+        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex].status)
+        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex].description)
     };
 
     // BUTTON "Edit Feedback" logic:
@@ -50,10 +50,10 @@ export default function AddEditFeedback() {
             id: parseInt(feedbackId),
             title: editedFeedbackTitle,
             category: editedFeedbackCategory,
-            upvotes: filteredItems[feedbackIndex]?.upvotes,
+            upvotes: filteredItems[feedbackIndex].upvotes,
             status: editedFeedbackStatus,
             description: editedFeedbackDescription,
-            comments: filteredItems[feedbackIndex]?.comments
+            comments: filteredItems[feedbackIndex].comments
         }
         // copy whole thing - context stuff
         const copyOfAllElements = [...filteredItems]
@@ -79,7 +79,7 @@ export default function AddEditFeedback() {
                     <EditFeedbackIcon />
                 </div>
                 <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
-                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex]?.title}'`}</span>
+                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex].title}'`}</span>
                 </div>
                 <Textfield
                     label='Feedback Title'
