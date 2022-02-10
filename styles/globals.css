@@ -211,3 +211,7 @@ a {
     font-weight: 600;
     font-size: 12px;
 }
+
+input:focus-visible {
+    border:none;
+}

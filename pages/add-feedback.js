@@ -7,9 +7,9 @@ import AppContext from "../context/AppContext";
 import { useState, useContext } from "react";
 import Link from 'next/link';
 
-const dropdownOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
+const dropdownCategory = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
 
-const addFeedback = () => {
+const AddFeedback = () => {
 
     const Context = useContext(AppContext);
 
@@ -48,7 +48,7 @@ const addFeedback = () => {
                 <div className="absolute w-[28.5rem] mt-[-1.75rem]">
                     <NewFeedback/>
                 </div>
-                <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
+                <div className="w-[28.5rem] mb-10 mt-[3.25rem]" >
                     <span className="text-b-24">Create New Feedback</span>
                 </div>   
                 <Textfield 
@@ -59,7 +59,7 @@ const addFeedback = () => {
                 <Dropdown 
                     label='Category' 
                     description='Choose a category for your feedback' 
-                    options={dropdownOptions}
+                    options={dropdownCategory}
                     input={newFeedbackCategory}
                     setInput={setNewFeedbackCategory}/>
                 <Textfield 
@@ -80,4 +80,4 @@ const addFeedback = () => {
     );
 };
 
-export default addFeedback;
+export default AddFeedback;

@@ -18,7 +18,7 @@ const FeedbackDetail = () => {
         <div className="flex flex-row justify-between mt-[5rem] mb-[1.5rem]">
           <GoBackBtn route="/" />
           <Button type="button" buttonStyle="btn--blue" buttonSize="btn--large">
-            <Link href="">
+          <Link href={`/feedback/${selectedFeedback.id}/edit-feedback`} >
               <a className="text-b-14_w">Edit Feedback</a>
             </Link>
           </Button>

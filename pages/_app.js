@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
           selectedFeedback: selectedFeedback,
           setSelectedFeedback: setSelectedFeedback,
           selectedCommentId: selectedCommentId,
-            setSelectedComment: setSelectedComment,
+          setSelectedComment: setSelectedComment,
           items: items,
           categories: categories,
           filteredItems: filteredItems,
