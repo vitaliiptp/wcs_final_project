@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import AppContext from '../../../context/AppContext';
 
 
-export default function addEditFeedback() {
+export default function AddEditFeedback() {
 
     // get ID of Feedback out of HTTP-Query
     const router = useRouter();
@@ -26,10 +26,10 @@ export default function addEditFeedback() {
     // where the default values are the existing ones from Context
 
     console.log("filteredItems", filteredItems);
-    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex].title);
-    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex].category);
-    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex].status);
-    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex].description);
+    const [editedFeedbackTitle, setEditedFeedbackTitle] = useState(filteredItems[feedbackIndex]?.title);
+    const [editedFeedbackCategory, setEditedFeedbackCategory] = useState(filteredItems[feedbackIndex]?.category);
+    const [editedFeedbackStatus, setEditedFeedbackStatus] = useState(filteredItems[feedbackIndex]?.status);
+    const [editedFeedbackDescription, setEditedFeedbackDescription] = useState(filteredItems[feedbackIndex]?.description);
 
     // create property list of dropdowns
     const dropdownCategory = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
@@ -79,7 +79,7 @@ export default function addEditFeedback() {
                     <EditFeedbackIcon />
                 </div>
                 <div className="w-[28.5rem] mb-10 mt-[3.25rem]">
-                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex].title}'`}</span>
+                    <span className="text-b-24">{`Editing '${filteredItems[feedbackIndex]?.title}'`}</span>
                 </div>
                 <Textfield
                     label='Feedback Title'
