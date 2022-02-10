@@ -18,11 +18,12 @@ const FeedbackCard = ({
 }) => {
   const { filteredItems, setSelectedFeedback } = useContext(AppContext);
 
-  const handleFeedbackSelection = () => {
-    setSelectedFeedback(
-      filteredItems.filter((item) => item.id === parseInt(id))[0]
-    );
-  };
+  // User handling selection - bad
+  // page handling selection - good
+  // no need oncklick function
+    /*const handleFeedbackSelection = () => {
+        setSelectedFeedback(filteredItems.filter((item) => item.id === parseInt(id))[0]);
+    }*/
 
   return (
     <div
@@ -32,18 +33,12 @@ const FeedbackCard = ({
         <UpvoteBtn upvotes={upvotes} id={id} />
       </div>
       <div className="flex flex-[80%] flex-col justify-between items-start">
-        <Link href={`/feedback/${id}`}>
-          <p
-            className={`text-b-18 ${textStyle}`}
-            onClick={handleFeedbackSelection}
-          >
-            {title}
-          </p>
-        </Link>
-
+          <Link href={`/feedback/${id}`} >
+              <p className={`text-b-18 ${textStyle}`}>{title}</p>
+          </Link>
         <p className="text-n-16">{description}</p>
         <CategoryTag
-          category={category.charAt(0).toUpperCase() + category.slice(1)}
+          category={category?.charAt(0).toUpperCase() + category?.slice(1)}
         />
       </div>
       <div className="flex flex-[10%] justify-end">
