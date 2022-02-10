@@ -37,10 +37,10 @@ export default function AddEditFeedback() {
 
     // BUTTON "Cancel" logic:
     function dropEdition() {
-        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex].title)
-        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex].category)
-        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex].status)
-        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex].description)
+        setEditedFeedbackTitle(prevTitle => prevTitle = filteredItems[feedbackIndex]?.title)
+        setEditedFeedbackCategory(prevCategory => prevCategory = filteredItems[feedbackIndex]?.category)
+        setEditedFeedbackStatus(prevStatus => prevStatus = filteredItems[feedbackIndex]?.status)
+        setEditedFeedbackDescription(prevDescription => prevDescription = filteredItems[feedbackIndex]?.description)
     };
 
     // BUTTON "Edit Feedback" logic:
